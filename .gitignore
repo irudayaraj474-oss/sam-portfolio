@@ -22,3 +22,7 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+
+# Temporary media & scripts
+compress_videos.ps1
+public/videos_temp/

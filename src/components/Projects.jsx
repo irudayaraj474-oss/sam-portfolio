@@ -21,7 +21,8 @@ const videoProjectsData = [
       "Layered Sound Design (Whooshes, Risers & Drops)",
       "Optimized 9:16 Mobile Engagement Architecture"
     ],
-    videoUrl: "/videos/snapsave-app_3824385035966009920_65314690993.mp4"
+    videoUrl: "https://firebasestorage.googleapis.com/v0/b/manavai-2adb5.firebasestorage.app/o/Samson-Portfolio%2FSURIYAS.mp4?alt=media&token=f19a516c-0467-4187-9105-cdca19111a48",
+    thumbnail: "/thumbnails/SURIYAS.jpg"
   },
   {
     id: "reel-2",
@@ -41,7 +42,8 @@ const videoProjectsData = [
       "Precision Speed Ramps & Motion Transitions",
       "Color Graded for Mobile OLED Displays"
     ],
-    videoUrl: "/videos/snapsave-app_3842492828975533127_65314690993.mp4"
+    videoUrl: "https://firebasestorage.googleapis.com/v0/b/manavai-2adb5.firebasestorage.app/o/Samson-Portfolio%2FS1.mp4?alt=media&token=82286d7a-a110-4b50-90b9-e34dacd20d07",
+    thumbnail: "/thumbnails/S1.jpg"
   },
   {
     id: "reel-3",
@@ -61,7 +63,8 @@ const videoProjectsData = [
       "Dynamic Zoom Punches & Angle Shifts",
       "Algorithmic Watch Time Optimization"
     ],
-    videoUrl: "/videos/snapsave-app_3986025513281589489_65314690993.mp4"
+    videoUrl: "https://firebasestorage.googleapis.com/v0/b/manavai-2adb5.firebasestorage.app/o/Samson-Portfolio%2FS3.mp4?alt=media&token=00afbe0a-984a-475b-8f27-6ab6d486278f",
+    thumbnail: "/thumbnails/S3.jpg"
   },
   {
     id: "reel-4",
@@ -81,7 +84,8 @@ const videoProjectsData = [
       "Micro-Zooms & Sound Effect Accents",
       "Paced for Maximum Engagement"
     ],
-    videoUrl: "/videos/snapsave-app_3632221467960134041_54349628532.mp4"
+    videoUrl: "https://firebasestorage.googleapis.com/v0/b/manavai-2adb5.firebasestorage.app/o/Samson-Portfolio%2FACAS.mp4?alt=media&token=33030c32-2de6-4d87-85d6-654a2f2d0cb3",
+    thumbnail: "/thumbnails/ACAS.jpg"
   },
   {
     id: "reel-5",
@@ -101,27 +105,29 @@ const videoProjectsData = [
       "Layered Foley & 3D Audio Spatialization",
       "Commercial-Grade Product Tracking"
     ],
-    videoUrl: "/videos/FINAL OP.mp4"
+    videoUrl: "https://firebasestorage.googleapis.com/v0/b/manavai-2adb5.firebasestorage.app/o/Samson-Portfolio%2FFINAL%20OP.mp4?alt=media&token=6f1b6cbe-4325-414c-9091-aeee49469ef9",
+    thumbnail: "/thumbnails/FINAL_OP.jpg"
   },
   {
     id: "reel-6",
     title: "Viral Luxury Real Estate Showcase",
-    badge: "Motion Graphic 01",
+    badge: "Social Reel 06",
     category: "Reels & Short-Form",
     type: "Viral Reel",
-    duration: "00:48",
+    duration: "00:43",
     resolution: "1080×1920 (9:16)",
     aspect: "9:16 Vertical",
     tools: ["Premiere Pro", "CapCut Pro", "DaVinci Resolve"],
     colorProfile: "Golden Hour Warmth Grade",
-    description: "Multi-million dollar architectural penthouse tour cut to a viral trending rhythm with seamless whip transitions, subtle bass drops, and clean modern caption animation.",
+    description: "Multi-million dollar architectural tour cut to a viral trending rhythm with seamless whip transitions, subtle bass drops, and clean modern caption animation.",
     highlights: [
       "Dynamic Beat Syncing on Every Cut",
       "High-Impact Kinetic Subtitles with Highlight Colors",
       "Smooth Whip-Pan & Object Mask Transitions",
       "Vocal De-Reverb & Dialogue Spatialization"
     ],
-    videoUrl: "/videos/FINAL VIDEO.mp4"
+    videoUrl: "https://firebasestorage.googleapis.com/v0/b/manavai-2adb5.firebasestorage.app/o/Samson-Portfolio%2FFINAL%20VIDEO.mp4?alt=media&token=a09fcc0c-9afe-4103-9105-112d79d163a1",
+    thumbnail: "/thumbnails/FINAL_VIDEO.jpg"
   },
   {
     id: "comm-1",
@@ -129,7 +135,7 @@ const videoProjectsData = [
     badge: "Commercial 01",
     category: "Commercials & Brand Ads",
     type: "Commercial",
-    duration: "01:45",
+    duration: "00:22",
     resolution: "4K 60FPS UHD",
     aspect: "16:9 Widescreen",
     tools: ["Adobe Premiere Pro", "After Effects", "DaVinci Resolve", "Sound Design"],
@@ -141,7 +147,8 @@ const videoProjectsData = [
       "Precision Speed Ramps on 120fps slow-motion",
       "Dynamic Split-Tone Color Grade"
     ],
-    videoUrl: "/videos/4k 60fps.mp4"
+    videoUrl: "https://firebasestorage.googleapis.com/v0/b/manavai-2adb5.firebasestorage.app/o/Samson-Portfolio%2F4k%2060fps.mp4?alt=media&token=9e025596-d262-401f-8f47-9c433b44505f",
+    thumbnail: "/thumbnails/4k_60fps.jpg"
   },
   {
     id: "comm-2",
@@ -149,19 +156,20 @@ const videoProjectsData = [
     badge: "Documentary 02",
     category: "YouTube & Long-Form",
     type: "YouTube Long-Form",
-    duration: "18:24",
+    duration: "01:21",
     resolution: "4K 24FPS DCI",
     aspect: "16:9 Cinematic",
     tools: ["Adobe Premiere Pro", "After Effects", "Adobe Audition"],
     colorProfile: "Arri Log-C Film Emulation",
-    description: "Documentary-style YouTube video packed with custom animated infographics, dynamic chart animations, archival footage restoration, and suspenseful scoring.",
+    description: "Documentary-style video packed with custom animated infographics, dynamic chart animations, archival footage restoration, and suspenseful scoring.",
     highlights: [
       "First 3-Second Hook Retention Architecture",
       "Over 40+ Custom Motion Graphic Infographics",
       "Atmospheric Sound Beds & Cinematic Risers",
       "Pattern Interrupts every 4 seconds"
     ],
-    videoUrl: "/videos/FINAL OUTPUT.mp4"
+    videoUrl: "https://firebasestorage.googleapis.com/v0/b/manavai-2adb5.firebasestorage.app/o/Samson-Portfolio%2FFINAL%20OUTPUT.mp4?alt=media&token=606057f3-22c2-473e-8981-6a3a382cf9f2",
+    thumbnail: "/thumbnails/FINAL_OUTPUT.jpg"
   },
   {
     id: "comm-3",
@@ -169,19 +177,20 @@ const videoProjectsData = [
     badge: "Brand Film 03",
     category: "Commercials & Brand Ads",
     type: "Brand Film",
-    duration: "02:10",
-    resolution: "4K 60FPS",
-    aspect: "16:9 CinemaScope",
+    duration: "00:42",
+    resolution: "1080×1920 (9:16)",
+    aspect: "9:16 CinemaScope",
     tools: ["Adobe Premiere Pro", "After Effects", "Sound Foley"],
     colorProfile: "High-Contrast Bleach Bypass Look",
-    description: "Gritty, sweat-soaked gym and athletic apparel film featuring hard-hitting sound effects, heartbeat audio tension builds, and aggressive motion tracking.",
+    description: "Gritty, athletic apparel film featuring hard-hitting sound effects, heartbeat audio tension builds, and aggressive motion tracking.",
     highlights: [
       "Rhythmic Barbell & Footstep Foley Layering",
       "Text Masking Behind Moving Athletes",
       "High-Energy Film Grain & Halation Effects",
       "Color Grade Optimized for Mobile OLED Displays"
     ],
-    videoUrl: "/videos/FINAL (2).mp4"
+    videoUrl: "https://firebasestorage.googleapis.com/v0/b/manavai-2adb5.firebasestorage.app/o/Samson-Portfolio%2FFINAL%20(2).mp4?alt=media&token=01da8ae3-b585-430e-a86d-4731334b4a05",
+    thumbnail: "/thumbnails/FINAL__2_.jpg"
   },
   {
     id: "comm-4",
@@ -201,22 +210,51 @@ const videoProjectsData = [
       "Brand Logo Animation Polish",
       "Multi-Platform Ad Spec Ready"
     ],
-    videoUrl: "/videos/snapsave-app_3956417325458150307_51822794386.mp4"
+    videoUrl: "https://firebasestorage.googleapis.com/v0/b/manavai-2adb5.firebasestorage.app/o/Samson-Portfolio%2Fsnapsave-app_3956417325458150307_51822794386.mp4?alt=media&token=4b5d97c8-c92a-4266-b5aa-357b1015e057",
+    thumbnail: "/thumbnails/snapsave-app_3956417325458150307_51822794386.jpg"
+  },
+  {
+    id: "comm-5",
+    title: "Dynamic Motion Identity & Title Sequence",
+    badge: "Motion Graphic 03",
+    category: "Commercials & Brand Ads",
+    type: "Motion Branding",
+    duration: "00:11",
+    resolution: "1280×720 (16:9)",
+    aspect: "16:9 Landscape",
+    tools: ["After Effects", "Cinema 4D", "Premiere Pro"],
+    colorProfile: "Vibrant Broadcast Rec.709",
+    description: "High-energy brand identity animation featuring kinetic particle dispersion, glowing typography, and custom rhythmic sound stabs.",
+    highlights: [
+      "Dynamic Particle & Light Streak Effects",
+      "Synchronized Impact Sound Design",
+      "Broadcast-Ready Color & Gamma",
+      "Fast-Turnaround Motion Polish"
+    ],
+    videoUrl: "https://firebasestorage.googleapis.com/v0/b/manavai-2adb5.firebasestorage.app/o/Samson-Portfolio%2FMG.mp4?alt=media&token=19644480-a823-4f6f-aec7-c606dbb3aaa3",
+    thumbnail: "/thumbnails/MG.jpg"
   }
 ];
 
 function ReelCard({ project, onSelectProject }) {
   const videoRef = useRef(null);
+  const [isPlaying, setIsPlaying] = useState(false);
 
   const handleMouseEnter = () => {
     if (videoRef.current) {
-      videoRef.current.play().catch(() => {});
+      const playPromise = videoRef.current.play();
+      if (playPromise !== undefined) {
+        playPromise
+          .then(() => setIsPlaying(true))
+          .catch(() => {});
+      }
     }
   };
 
   const handleMouseLeave = () => {
     if (videoRef.current) {
       videoRef.current.pause();
+      setIsPlaying(false);
     }
   };
 
@@ -227,15 +265,28 @@ function ReelCard({ project, onSelectProject }) {
       onMouseLeave={handleMouseLeave}
       className="group relative flex-shrink-0 w-64 sm:w-72 md:w-80 aspect-[9/16] rounded-3xl overflow-hidden bg-slate-900 border border-slate-200/90 shadow-md hover:shadow-2xl hover:scale-[1.03] transition-all duration-300 cursor-pointer select-none"
     >
+      {/* High-Quality Thumbnail Poster Image (Always visible instantly as fallback) */}
+      {project.thumbnail && (
+        <img
+          src={project.thumbnail}
+          alt={project.title}
+          className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-300 ${
+            isPlaying ? "opacity-0 pointer-events-none" : "opacity-100"
+          }`}
+          loading="lazy"
+        />
+      )}
+
       {/* Video Element with Autoplay on Hover */}
       <video
         ref={videoRef}
         src={project.videoUrl}
+        poster={project.thumbnail}
         muted
         loop
         playsInline
         preload="metadata"
-        className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 bg-black"
+        className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 bg-transparent"
       />
 
       {/* Subtle Top & Bottom Gradient Shadows */}

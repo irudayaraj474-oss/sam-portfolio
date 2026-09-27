@@ -30,8 +30,9 @@ function Home() {
       "S-Log3 to Film Emulation Color Grade",
       "Custom 2D/3D Kinetic Typography"
     ],
-    // Connected to your authentic 4K 60FPS video in public/videos/
-    videoUrl: "/videos/4k 60fps.mp4"
+    // Connected to your authentic 4K 60FPS video on Firebase Storage
+    videoUrl: "https://firebasestorage.googleapis.com/v0/b/manavai-2adb5.firebasestorage.app/o/Samson-Portfolio%2F4k%2060fps.mp4?alt=media&token=9e025596-d262-401f-8f47-9c433b44505f",
+    thumbnail: "/thumbnails/4k_60fps.jpg"
   };
 
   const handleOpenShowreel = () => {

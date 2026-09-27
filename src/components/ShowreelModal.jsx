@@ -35,8 +35,8 @@ function parseVideoSource(url) {
     }
   }
 
-  // Direct video file (.mp4, .webm, or local file in /videos/)
-  return { type: "direct", embedUrl: encodeURI(url) };
+  // Direct video file (.mp4, .webm, or Firebase Storage URL)
+  return { type: "direct", embedUrl: url };
 }
 
 export default function ShowreelModal({ isOpen, onClose, project }) {
@@ -114,9 +114,10 @@ export default function ShowreelModal({ isOpen, onClose, project }) {
                   href={currentProject.videoUrl}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="px-3 py-1 rounded-full bg-slate-200 hover:bg-slate-300 text-slate-800 text-xs font-mono font-medium transition flex items-center gap-1.5"
+                  className="px-3.5 py-1.5 rounded-full bg-purple-600 hover:bg-purple-700 text-white text-xs font-semibold transition flex items-center gap-1.5 shadow-sm hover:scale-105"
+                  title="Open video URL in new tab"
                 >
-                  <span>Open Video</span>
+                  <span>Open Video Link</span>
                   <FaExternalLinkAlt className="text-[10px]" />
                 </a>
               )}
@@ -137,6 +138,7 @@ export default function ShowreelModal({ isOpen, onClose, project }) {
               videoSource.type === "direct" ? (
                 <video
                   src={videoSource.embedUrl}
+                  poster={currentProject.thumbnail}
                   controls
                   autoPlay
                   playsInline
