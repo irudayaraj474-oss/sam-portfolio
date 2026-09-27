@@ -75,7 +75,7 @@ export default function About() {
             className="lg:col-span-6 space-y-6"
           >
             <h3 className="text-2xl sm:text-3xl font-bold font-display text-slate-950">
-              Hey, I'm <span className="text-purple-600">Samson Donald</span>.
+              Hey, I'm <span className="text-purple-600">Samson Donald I</span>.
             </h3>
 
             <p className="text-slate-700 text-base sm:text-lg leading-relaxed font-normal">

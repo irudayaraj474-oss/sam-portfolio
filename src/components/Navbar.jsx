@@ -19,11 +19,11 @@ export default function Navbar({ onOpenShowreel }) {
       {/* Floating Island Navbar as shown in reference design */}
       <nav className="fixed top-4 inset-x-0 z-50 flex justify-center px-4 pointer-events-none">
         <div className="w-full max-w-4xl bg-white/95 backdrop-blur-xl border border-gray-200 shadow-xl shadow-gray-200/50 rounded-full px-3 sm:px-5 py-2 flex items-center justify-between pointer-events-auto">
-          {/* Logo Badge (✦ Samson Donald EDITOR) */}
+          {/* Logo Badge (✦ Samson Donald I EDITOR) */}
           <a href="#" className="flex items-center gap-2 group">
             <div className="flex items-center gap-1.5 px-3.5 py-1.5 rounded-full bg-black text-white text-xs font-semibold shadow-sm">
               <span className="text-yellow-400 text-xs">✦</span>
-              <span className="tracking-tight whitespace-nowrap">Samson Donald</span>
+              <span className="tracking-tight whitespace-nowrap">Samson Donald I</span>
             </div>
             <span className="px-2 py-0.5 rounded-full bg-red-50 text-red-500 border border-red-200 text-[10px] font-bold tracking-wider uppercase font-mono">
               EDITOR

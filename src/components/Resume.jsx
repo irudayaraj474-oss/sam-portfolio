@@ -52,7 +52,7 @@ export default function Resume() {
         >
           <a
             href="/Samson_Donald_Resume.pdf"
-            download="Samson_Donald_Resume.pdf"
+            download="Samson_Donald_I_Resume.pdf"
             className="inline-flex items-center gap-3 px-8 py-4 rounded-full bg-[#c5221f] hover:bg-[#a71a17] text-white font-semibold text-sm sm:text-base shadow-lg shadow-red-600/25 transition-all duration-300 hover:scale-105 active:scale-95 group cursor-pointer"
           >
             <FaFileAlt className="text-base text-white/90 group-hover:scale-110 transition-transform" />

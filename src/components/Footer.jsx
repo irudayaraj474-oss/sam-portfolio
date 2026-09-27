@@ -89,7 +89,7 @@ export default function Footer() {
           {/* Column 1: Personal Branding (5 cols) */}
           <div className="md:col-span-5 space-y-4">
             <h2 className="text-[26px] sm:text-[30px] font-bold text-[#F8FAFC] tracking-tight font-display leading-tight">
-              SAMSON <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-sky-300 to-amber-300">DONALD</span>
+              SAMSON <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-sky-300 to-amber-300">DONALD I</span>
             </h2>
 
             <div className="space-y-2">
@@ -173,7 +173,7 @@ export default function Footer() {
         <div className="pt-8 flex flex-col md:flex-row items-center justify-between gap-5 text-[13px] font-mono text-[#94A3B8]">
           {/* Copyright Statement */}
           <p className="text-center md:text-left">
-            © 2026 <span className="text-[#F8FAFC] font-semibold">Samson Donald</span> — Crafted with precision for modern brands.
+            © 2026 <span className="text-[#F8FAFC] font-semibold">Samson Donald I</span> — Crafted with precision for modern brands.
           </p>
 
           {/* Personal Signature */}

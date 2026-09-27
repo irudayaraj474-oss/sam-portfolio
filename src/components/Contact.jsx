@@ -101,7 +101,7 @@ export default function Contact() {
 
           {/* WhatsApp Card */}
           <a
-            href={`https://wa.me/918940645818?text=${encodeURIComponent("Hi Samson, I'm interested in working with you on video editing!")}`}
+            href={`https://wa.me/918940645818?text=${encodeURIComponent("Hi Samson Donald I, I'm interested in working with you on video editing!")}`}
             target="_blank"
             rel="noopener noreferrer"
             className="p-5 rounded-2xl bg-white border border-slate-200 hover:border-emerald-500 transition-all flex items-center justify-between group shadow-sm"
