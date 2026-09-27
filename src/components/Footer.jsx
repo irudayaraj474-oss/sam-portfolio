@@ -92,14 +92,6 @@ export default function Footer() {
               </p>
             </div>
 
-            {/* Recruiter-ready signature banner */}
-            <div className="pt-1">
-              <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-cyan-950/40 border border-cyan-400/20 text-cyan-300/90 text-[11px] font-mono">
-                <span className="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse"></span>
-                <span>OPEN FOR SELECT COMMISSIONS</span>
-              </div>
-            </div>
-
             {/* Social Glassmorphism Buttons (44×44px, Rounded 14px, Cyan Glow) */}
             <div className="pt-2 flex items-center gap-3">
               {socials.map((s, idx) => (
