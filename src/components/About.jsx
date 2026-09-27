@@ -55,7 +55,7 @@ export default function About() {
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="text-3xl sm:text-4xl md:text-5xl font-extrabold font-display text-slate-950 tracking-tight"
+            className="text-3xl sm:text-4xl md:text-5xl font-extrabold font-playfair text-slate-950 tracking-tight"
           >
             Editing Isn't Just Cutting Clips. <br className="hidden sm:inline" />
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-600 via-indigo-600 to-cyan-600">
@@ -74,19 +74,19 @@ export default function About() {
             transition={{ duration: 0.7 }}
             className="lg:col-span-6 space-y-6"
           >
-            <h3 className="text-2xl sm:text-3xl font-bold font-display text-slate-950">
+            <h3 className="text-2xl sm:text-3xl font-bold font-playfair text-slate-950">
               Hey, I'm <span className="text-purple-600">Samson Donald I</span>.
             </h3>
 
-            <p className="text-slate-700 text-base sm:text-lg leading-relaxed font-normal">
+            <p className="text-slate-700 text-base sm:text-lg leading-relaxed font-normal font-montserrat">
               I’m a <strong className="text-slate-950 font-semibold">Video Editor & Motion Graphics Artist</strong> who enjoys creating engaging videos that capture attention from the first few seconds. I work with <strong className="text-slate-950 font-semibold">Adobe Premiere Pro</strong>, motion graphics, sound design, and fast-paced editing to turn raw footage into professional content.
             </p>
 
-            <p className="text-slate-600 text-sm sm:text-base leading-relaxed">
+            <p className="text-slate-600 text-sm sm:text-base leading-relaxed font-montserrat">
               I enjoy editing <strong className="text-slate-900 font-semibold">luxury brand commercials, social media Reels, promotional videos, and cinematic short-form content</strong>. Whether it’s a 30-second advertisement, a high-energy vertical Reel, or a visually polished promotional video, I focus on smooth transitions, clean storytelling, and edits that keep viewers engaged.
             </p>
 
-            <p className="text-slate-600 text-sm sm:text-base leading-relaxed">
+            <p className="text-slate-600 text-sm sm:text-base leading-relaxed font-montserrat">
               I’m continuously improving my creative skills and always look for new ways to make every video feel more premium, impactful, and memorable.
             </p>
 

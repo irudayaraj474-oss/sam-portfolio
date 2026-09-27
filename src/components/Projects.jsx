@@ -1,8 +1,9 @@
 import { useState, useRef } from "react";
-import { motion, AnimatePresence } from "framer-motion";
+import { motion } from "framer-motion";
 import { FaPlay, FaPause, FaArrowRight } from "react-icons/fa";
 
-const videoProjectsData = [
+// All 10 Unique Master Productions (Duplicate Removed)
+export const videoProjectsData = [
   {
     id: "reel-1",
     title: "Viral High-Retention Reel — Pacing & Hook",
@@ -68,7 +69,7 @@ const videoProjectsData = [
   },
   {
     id: "reel-4",
-    title: "Viral Creator Reel — Retention Hook & Dynamic Typography",
+    title: "Viral Creator Reel — Retention Hook & Typography",
     badge: "Social Reel 04",
     category: "Reels & Short-Form",
     type: "Viral Reel",
@@ -132,7 +133,7 @@ const videoProjectsData = [
   {
     id: "comm-1",
     title: "Apex Hyperdrive — Cyberpunk Brand Film",
-    badge: "Commercial 01",
+    badge: "Commercial 07",
     category: "Commercials & Brand Ads",
     type: "Commercial",
     duration: "00:22",
@@ -153,7 +154,7 @@ const videoProjectsData = [
   {
     id: "comm-2",
     title: "Inside the AI Economy — Deep Dive Documentary",
-    badge: "Documentary 02",
+    badge: "Documentary 08",
     category: "YouTube & Long-Form",
     type: "YouTube Long-Form",
     duration: "01:21",
@@ -174,7 +175,7 @@ const videoProjectsData = [
   {
     id: "comm-3",
     title: "IronPulse Performance — Athletic Commercial",
-    badge: "Brand Film 03",
+    badge: "Brand Film 09",
     category: "Commercials & Brand Ads",
     type: "Brand Film",
     duration: "00:42",
@@ -194,29 +195,8 @@ const videoProjectsData = [
   },
   {
     id: "comm-4",
-    title: "Commercial Bumper & Brand Stinger — 11s Teaser",
-    badge: "Motion Graphic 02",
-    category: "Commercials & Brand Ads",
-    type: "Brand Bumper",
-    duration: "00:11",
-    resolution: "1280×720 (16:9)",
-    aspect: "16:9 Landscape",
-    tools: ["After Effects", "Premiere Pro", "Sound FX"],
-    colorProfile: "Cinematic Commercial High-Contrast",
-    description: "Punchy 11-second cinematic bumper cut with aggressive motion graphics, sonic branding, and immediate visual impact engineered for pre-roll and digital ad spots.",
-    highlights: [
-      "High-Impact 11-Second Hook",
-      "Fast Motion Graphics & Sound Stabs",
-      "Brand Logo Animation Polish",
-      "Multi-Platform Ad Spec Ready"
-    ],
-    videoUrl: "https://firebasestorage.googleapis.com/v0/b/manavai-2adb5.firebasestorage.app/o/Samson-Portfolio%2Fsnapsave-app_3956417325458150307_51822794386.mp4?alt=media&token=4b5d97c8-c92a-4266-b5aa-357b1015e057",
-    thumbnail: "/thumbnails/snapsave-app_3956417325458150307_51822794386.jpg"
-  },
-  {
-    id: "comm-5",
     title: "Dynamic Motion Identity & Title Sequence",
-    badge: "Motion Graphic 03",
+    badge: "Motion Graphic 10",
     category: "Commercials & Brand Ads",
     type: "Motion Branding",
     duration: "00:11",
@@ -265,7 +245,7 @@ function ReelCard({ project, onSelectProject }) {
       onMouseLeave={handleMouseLeave}
       className="group relative flex-shrink-0 w-64 sm:w-72 md:w-80 aspect-[9/16] rounded-3xl overflow-hidden bg-slate-900 border border-slate-200/90 shadow-md hover:shadow-2xl hover:scale-[1.03] transition-all duration-300 cursor-pointer select-none"
     >
-      {/* High-Quality Thumbnail Poster Image (Always visible instantly as fallback) */}
+      {/* High-Quality Thumbnail Poster Image */}
       {project.thumbnail && (
         <img
           src={project.thumbnail}
@@ -290,7 +270,7 @@ function ReelCard({ project, onSelectProject }) {
       />
 
       {/* Subtle Top & Bottom Gradient Shadows */}
-      <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-transparent to-black/40 pointer-events-none"></div>
+      <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-transparent to-black/50 pointer-events-none"></div>
 
       {/* Top Details (Duration & Resolution) */}
       <div className="absolute top-4 left-4 right-4 flex items-center justify-between text-[11px] font-mono text-white/90 z-10 pointer-events-none">
@@ -309,7 +289,7 @@ function ReelCard({ project, onSelectProject }) {
         </div>
       </div>
 
-      {/* Bottom Content: Red Dot Badge (Matching Screenshot) */}
+      {/* Bottom Content: Red Dot Badge & Title */}
       <div className="absolute bottom-4 inset-x-4 z-20 flex flex-col gap-2 pointer-events-none">
         <div className="flex items-center justify-between">
           <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-black/80 backdrop-blur-md text-white text-xs font-semibold border border-white/15 shadow-md">
@@ -317,12 +297,12 @@ function ReelCard({ project, onSelectProject }) {
             <span>{project.badge}</span>
           </div>
 
-          <span className="text-[11px] font-medium text-white/80 opacity-0 group-hover:opacity-100 transition-opacity flex items-center gap-1">
+          <span className="text-[11px] font-medium text-white/90 opacity-0 group-hover:opacity-100 transition-opacity flex items-center gap-1">
             Watch <FaArrowRight className="text-[9px]" />
           </span>
         </div>
 
-        <h4 className="text-white text-xs sm:text-sm font-bold line-clamp-1 drop-shadow-md">
+        <h4 className="text-white text-xs sm:text-sm font-bold line-clamp-2 drop-shadow-md">
           {project.title}
         </h4>
       </div>
@@ -331,21 +311,22 @@ function ReelCard({ project, onSelectProject }) {
 }
 
 export default function Projects({ onSelectProject }) {
-  const [activeTab, setActiveTab] = useState("Reels & Motion");
+  const [activeTab, setActiveTab] = useState("All 10 Videos");
   const [isPaused, setIsPaused] = useState(false);
 
   const categories = [
-    "Reels & Motion",
-    "Commercials & Brand Ads",
-    "YouTube & Long-Form",
-    "All Works"
+    { label: "All 10 Videos", filterKey: "all", count: videoProjectsData.length },
+    { label: "Reels & Short-Form", filterKey: "Reels & Short-Form", count: 6 },
+    { label: "Commercials & Ads", filterKey: "Commercials & Brand Ads", count: 3 },
+    { label: "Documentary", filterKey: "YouTube & Long-Form", count: 1 }
   ];
 
-  const filteredProjects = activeTab === "All Works"
+  const filteredProjects = activeTab === "All 10 Videos"
     ? videoProjectsData
-    : activeTab === "Reels & Motion"
-    ? videoProjectsData.filter((p) => p.category === "Reels & Short-Form")
-    : videoProjectsData.filter((p) => p.category === activeTab);
+    : videoProjectsData.filter((p) => {
+        const matchingCat = categories.find((c) => c.label === activeTab);
+        return matchingCat ? p.category === matchingCat.filterKey : true;
+      });
 
   // Guarantee minimum items so track is wider than any viewport before duplicating
   const repeatFactor = Math.max(1, Math.ceil(8 / Math.max(1, filteredProjects.length)));
@@ -356,31 +337,35 @@ export default function Projects({ onSelectProject }) {
   return (
     <section id="projects" className="relative py-24 px-4 sm:px-6 lg:px-8 bg-white overflow-hidden">
       <div className="max-w-7xl mx-auto relative z-10">
-        {/* Section Header (Matching Screenshot: Reels & Motion + Status Info) */}
+        
+        {/* Section Header */}
         <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-10 pb-6 border-b border-gray-100">
           <div>
             <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-purple-50 border border-purple-200 text-purple-700 text-xs font-mono font-semibold mb-3">
-              <span>// POST-PRODUCTION VAULT</span>
+              <span>// POST-PRODUCTION VAULT • CONTINUOUS INFINITE LOOP</span>
             </div>
             <motion.h2
               initial={{ opacity: 0, y: 15 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              className="text-3xl sm:text-5xl md:text-6xl font-black font-display text-slate-950 tracking-tight"
+              className="text-3xl sm:text-5xl md:text-6xl font-black font-playfair text-slate-950 tracking-tight"
             >
-              Reels & Motion
+              Reels & Motion Vault
             </motion.h2>
+            <p className="text-slate-600 text-sm mt-2 max-w-xl font-montserrat">
+              All 10 master productions aligned in a single continuous row, looping right to left. Hover over any video to pause and preview.
+            </p>
           </div>
 
           {/* Marquee info indicator with interactive Pause/Play toggle */}
           <div className="flex flex-col sm:flex-row sm:items-center gap-3">
             <button
               onClick={() => setIsPaused(!isPaused)}
-              className="inline-flex items-center gap-2 text-xs font-mono text-slate-700 bg-slate-50 hover:bg-slate-100 px-3.5 py-1.5 rounded-full border border-slate-200 transition cursor-pointer select-none"
+              className="inline-flex items-center gap-2 text-xs font-mono text-slate-700 bg-slate-50 hover:bg-slate-100 px-4 py-2 rounded-full border border-slate-200 transition cursor-pointer select-none shadow-xs"
               title="Click to pause or resume continuous loop"
             >
-              <span className={`w-2 h-2 rounded-full ${isPaused ? "bg-amber-500" : "bg-red-500 animate-pulse"}`}></span>
-              <span>{isPaused ? "Loop Paused • Click to Resume" : "Looping Right to Left • Hover to preview"}</span>
+              <span className={`w-2.5 h-2.5 rounded-full ${isPaused ? "bg-amber-500" : "bg-red-500 animate-pulse"}`}></span>
+              <span>{isPaused ? "Loop Paused • Click to Resume" : "Looping Right to Left (10 Videos)"}</span>
               {isPaused ? <FaPlay className="text-[9px] text-slate-600 ml-1" /> : <FaPause className="text-[9px] text-slate-400 ml-1" />}
             </button>
 
@@ -388,34 +373,40 @@ export default function Projects({ onSelectProject }) {
             <div className="flex flex-wrap gap-1.5">
               {categories.map((cat) => (
                 <button
-                  key={cat}
-                  onClick={() => setActiveTab(cat)}
-                  className={`px-3.5 py-1.5 rounded-full text-xs font-semibold transition-all duration-200 cursor-pointer ${
-                    activeTab === cat
-                      ? "bg-black text-white shadow-md"
+                  key={cat.label}
+                  onClick={() => setActiveTab(cat.label)}
+                  className={`px-3.5 py-1.5 rounded-full text-xs font-semibold transition-all duration-200 cursor-pointer flex items-center gap-1.5 ${
+                    activeTab === cat.label
+                      ? "bg-black text-white shadow-md scale-105"
                       : "bg-slate-100 hover:bg-slate-200 text-slate-700 border border-slate-200/60"
                   }`}
                 >
-                  {cat}
+                  <span>{cat.label}</span>
+                  <span className={`px-1.5 py-0.2 rounded-full text-[10px] font-mono ${
+                    activeTab === cat.label ? "bg-white/20 text-white" : "bg-slate-200 text-slate-600"
+                  }`}>
+                    {cat.count}
+                  </span>
                 </button>
               ))}
             </div>
           </div>
         </div>
 
-        {/* Infinite Loop Showcase (Right to Left Continuous Motion) */}
+        {/* ALL 10 VIDEOS IN ONE SINGLE CONTINUOUS ROW (MOVING RIGHT TO LEFT IN AN INFINITE LOOP) */}
         <div className="relative w-full overflow-hidden py-4 -mx-4 sm:mx-0">
-          {/* Edge Fade Overlays for seamless entrance and exit */}
-          <div className="pointer-events-none absolute left-0 top-0 bottom-0 w-12 sm:w-24 bg-gradient-to-r from-white via-white/80 to-transparent z-20"></div>
-          <div className="pointer-events-none absolute right-0 top-0 bottom-0 w-12 sm:w-24 bg-gradient-to-l from-white via-white/80 to-transparent z-20"></div>
+          {/* Left Edge Fade Overlay */}
+          <div className="pointer-events-none absolute left-0 top-0 bottom-0 w-16 sm:w-28 bg-gradient-to-r from-white via-white/80 to-transparent z-20"></div>
+          {/* Right Edge Fade Overlay */}
+          <div className="pointer-events-none absolute right-0 top-0 bottom-0 w-16 sm:w-28 bg-gradient-to-l from-white via-white/80 to-transparent z-20"></div>
 
-          {/* Continuous Right-to-Left Track */}
+          {/* Continuous Right-to-Left Infinite Row */}
           <div
             key={activeTab}
             className="animate-reel-marquee flex items-center gap-6"
             style={{
               animationPlayState: isPaused ? "paused" : undefined,
-              animationDuration: `${Math.max(35, baseList.length * 4.2)}s`
+              animationDuration: `${Math.max(40, baseList.length * 4.2)}s`
             }}
           >
             {marqueeList.map((project, idx) => (
@@ -428,17 +419,27 @@ export default function Projects({ onSelectProject }) {
           </div>
         </div>
 
-        {/* Bottom Centered "View All Projects" Pill Button (Matching Screenshot) */}
-        <div className="mt-10 flex justify-center">
+        {/* Bottom Status Banner */}
+        <div className="mt-10 flex flex-col sm:flex-row items-center justify-between gap-4 p-5 rounded-2xl bg-slate-50 border border-slate-200/80">
+          <div className="flex items-center gap-3">
+            <span className="flex h-3 w-3 relative">
+              <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
+              <span className="relative inline-flex rounded-full h-3 w-3 bg-emerald-500"></span>
+            </span>
+            <p className="text-xs sm:text-sm font-medium text-slate-700">
+              <span className="font-bold text-slate-900">All 10 unique video projects</span> are running in one seamless row. Hover over any card to preview.
+            </p>
+          </div>
+
           <a
             href="#gallery"
-            className="inline-flex items-center gap-2.5 px-7 py-3.5 rounded-full bg-black hover:bg-slate-800 text-white font-semibold text-xs sm:text-sm shadow-xl shadow-slate-900/10 transition-all duration-300 hover:scale-105 group"
+            className="inline-flex items-center gap-2 px-6 py-2.5 rounded-full bg-black hover:bg-slate-800 text-white font-semibold text-xs transition shadow-sm hover:scale-105 cursor-pointer whitespace-nowrap"
           >
-            <span className="text-base leading-none">⊞</span>
-            <span>View All Projects</span>
-            <span className="text-sm leading-none group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform">↗</span>
+            <span>View Commercial Key Art</span>
+            <span className="text-sm">→</span>
           </a>
         </div>
+
       </div>
     </section>
   );

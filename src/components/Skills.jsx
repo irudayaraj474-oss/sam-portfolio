@@ -180,7 +180,7 @@ export default function Skills() {
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="text-3xl sm:text-4xl md:text-5xl font-extrabold font-display text-white tracking-tight leading-tight"
+            className="text-3xl sm:text-4xl md:text-5xl font-extrabold font-playfair text-white tracking-tight leading-tight"
           >
             Mastered Software & <br />
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-sky-300 to-amber-300">
@@ -188,7 +188,7 @@ export default function Skills() {
             </span>
           </motion.h2>
 
-          <p className="text-slate-400 text-sm sm:text-base mt-4 max-w-2xl mx-auto font-normal leading-relaxed">
+          <p className="text-slate-400 text-sm sm:text-base mt-4 max-w-2xl mx-auto font-normal leading-relaxed font-montserrat">
             From industry-standard non-linear suites to surgical color science, luxury brand art direction, and high-retention audio engineering.
           </p>
         </div>

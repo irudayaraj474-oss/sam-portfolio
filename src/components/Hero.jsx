@@ -1,13 +1,17 @@
 import { motion } from "framer-motion";
 import { FaPlay } from "react-icons/fa";
 import TimelineMockup from "./TimelineMockup";
+import AntigravityDots from "./AntigravityDots";
 
 export default function Hero({ onOpenShowreel }) {
   return (
-    <section className="relative pt-36 pb-20 px-4 sm:px-6 lg:px-8 bg-white overflow-hidden cinema-grid flex flex-col justify-center items-center">
+    <section className="relative pt-36 pb-20 px-4 sm:px-6 lg:px-8 bg-white overflow-hidden flex flex-col justify-center items-center">
+      {/* Google Antigravity Interactive Dot Particle Field */}
+      <AntigravityDots />
+
       {/* Ambient Soft Glow Elements */}
-      <div className="absolute w-[600px] h-[600px] bg-purple-200/30 blur-[180px] rounded-full -top-20 -left-20 pointer-events-none"></div>
-      <div className="absolute w-[500px] h-[500px] bg-cyan-200/30 blur-[180px] rounded-full top-1/3 -right-20 pointer-events-none"></div>
+      <div className="absolute w-[600px] h-[600px] bg-purple-200/20 blur-[180px] rounded-full -top-20 -left-20 pointer-events-none"></div>
+      <div className="absolute w-[500px] h-[500px] bg-cyan-200/20 blur-[180px] rounded-full top-1/3 -right-20 pointer-events-none"></div>
 
       <div className="relative max-w-6xl mx-auto text-center w-full z-10">
         {/* Main Hero Headline */}

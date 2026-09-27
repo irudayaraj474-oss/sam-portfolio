@@ -43,14 +43,14 @@ export default function Contact() {
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="text-3xl sm:text-4xl md:text-5xl font-extrabold font-display text-slate-950 tracking-tight"
+            className="text-3xl sm:text-4xl md:text-5xl font-extrabold font-playfair text-slate-950 tracking-tight"
           >
             Let's Make Your Footage <br />
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-600 via-indigo-600 to-cyan-600">
               Unskippable & Cinematic
             </span>
           </motion.h2>
-          <p className="text-slate-600 text-sm sm:text-base mt-4 max-w-xl mx-auto">
+          <p className="text-slate-600 text-sm sm:text-base mt-4 max-w-xl mx-auto font-montserrat">
             Ready to scale your YouTube watch time, launch an ad campaign, or produce viral shorts? Reach out directly below.
           </p>
         </div>

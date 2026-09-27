@@ -18,6 +18,14 @@
   }
 }
 
+.font-playfair {
+  font-family: 'Playfair Display', Georgia, serif !important;
+}
+
+.font-montserrat {
+  font-family: 'Montserrat', sans-serif !important;
+}
+
 /* Custom modern scrollbar */
 ::-webkit-scrollbar {
   width: 8px;

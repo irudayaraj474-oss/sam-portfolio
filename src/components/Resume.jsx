@@ -25,7 +25,7 @@ export default function Resume() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.5, delay: 0.1 }}
-          className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-black font-display text-slate-900 tracking-tight"
+          className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold font-playfair text-slate-900 tracking-tight"
         >
           Let's Discuss <span className="text-[#c5221f]">Opportunities</span>
         </motion.h2>
@@ -36,7 +36,7 @@ export default function Resume() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.5, delay: 0.2 }}
-          className="mt-6 text-slate-600 text-base sm:text-lg md:text-xl max-w-2xl mx-auto leading-relaxed font-normal"
+          className="mt-6 text-slate-600 text-base sm:text-lg md:text-xl max-w-2xl mx-auto leading-relaxed font-normal font-montserrat"
         >
           I am actively seeking full-time Video Editor & Motion Graphics roles. <br className="hidden sm:inline" />
           Whether you represent a creative agency, tech firm, or brand, let’s connect!

@@ -16,8 +16,32 @@ import srmDigiGoldFirefly from "../assets/images/srm_digi_gold_firefly.jpg";
 import srmNecklaceRate from "../assets/images/srm_necklace_rate.jpg";
 import srmRateSep from "../assets/images/srm_rate_sep.jpg";
 import srmRingRate from "../assets/images/srm_ring_rate.jpg";
+import srmElephantWealth from "../assets/images/srm_elephant_wealth.jpg";
+import srmFamilySchemes from "../assets/images/srm_family_schemes.jpg";
 
 const graphicDesignWorks = [
+  { 
+    id: "srm-elephant-wealth",
+    img: srmElephantWealth, 
+    title: "The SRM Gold & Diamonds — 'Great Wealth Starts Small'", 
+    client: "The SRM Gold & Diamonds",
+    tag: "Metaphorical Fintech Poster",
+    sector: "Fintech & Mobile Apps",
+    ctr: "+8.4% Scheme Awareness",
+    category: "Campaign Poster & Digi Gold Key Art",
+    description: "Symbolic brand campaign illustrating that wealth is built one step, one day, one savings at a time. Features a majestic elephant leaving golden footprints leading to a physical SRM coin alongside the SRM Digi Gold mobile app."
+  },
+  { 
+    id: "srm-family-schemes",
+    img: srmFamilySchemes, 
+    title: "SRM Digi Gold — 'Atchaya Gold & Family Savings Scheme'", 
+    client: "The SRM Gold & Diamonds",
+    tag: "Retail Family Scheme Ad",
+    sector: "Fintech & Mobile Apps",
+    ctr: "+9.5% In-Store Footfall",
+    category: "Retail Launch & Multi-Scheme Art",
+    description: "High-impact retail promotional creative highlighting multiple gold schemes (Atchaya Gold, Digi Gold, Gold Bond) with a cheerful family, real-time gold rates, store address in Manapparai, and app store download links."
+  },
   { 
     id: "srm-saving-scheme",
     img: srmSavingScheme, 
@@ -174,21 +198,21 @@ export default function Gallery() {
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="text-3xl sm:text-4xl md:text-5xl font-extrabold font-display text-slate-950 tracking-tight"
+            className="text-3xl sm:text-4xl md:text-5xl font-extrabold font-playfair text-slate-950 tracking-tight"
           >
             Commercial Posters, Key Art & <br />
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-600 via-indigo-600 to-cyan-600">
               High-CTR Campaign Graphics
             </span>
           </motion.h2>
-          <p className="text-slate-600 text-sm sm:text-base mt-4 max-w-2xl mx-auto font-normal">
+          <p className="text-slate-600 text-sm sm:text-base mt-4 max-w-2xl mx-auto font-normal font-montserrat">
             From luxury jewelry branding and fintech app launches to high-converting social key art. Click any poster to inspect in full resolution.
           </p>
 
           {/* Quick Metrics Ticker */}
           <div className="mt-8 grid grid-cols-2 sm:grid-cols-4 gap-3 max-w-3xl mx-auto">
             <div className="p-3.5 rounded-2xl bg-white border border-slate-200/90 shadow-sm text-center">
-              <span className="text-xl font-bold text-purple-600 font-display">10+</span>
+              <span className="text-xl font-bold text-purple-600 font-display">13+</span>
               <p className="text-[11px] text-slate-500 mt-0.5 font-medium">Commercial Campaigns</p>
             </div>
             <div className="p-3.5 rounded-2xl bg-white border border-slate-200/90 shadow-sm text-center">
@@ -243,7 +267,7 @@ export default function Gallery() {
               >
                 <div>
                   {/* Image Container with Framing */}
-                  <div className="relative overflow-hidden bg-slate-100 h-84 flex items-center justify-center p-3">
+                  <div className="relative overflow-hidden bg-slate-100 h-88 flex items-center justify-center p-3 pt-12">
                     <img
                       src={item.img}
                       alt={item.title}

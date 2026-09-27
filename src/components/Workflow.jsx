@@ -67,14 +67,14 @@ export default function Workflow() {
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="text-3xl sm:text-4xl md:text-5xl font-extrabold font-display text-slate-950 tracking-tight"
+            className="text-3xl sm:text-4xl md:text-5xl font-extrabold font-playfair text-slate-950 tracking-tight"
           >
             How We Turn Raw Rushes Into <br />
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-600 via-indigo-600 to-cyan-600">
               High-Converting Visual Films
             </span>
           </motion.h2>
-          <p className="text-slate-600 text-sm sm:text-base mt-4 max-w-2xl mx-auto">
+          <p className="text-slate-600 text-sm sm:text-base mt-4 max-w-2xl mx-auto font-montserrat">
             A seamless, stress-free 5-stage editing pipeline crafted for creators and brands who demand perfection and rapid delivery.
           </p>
         </div>
