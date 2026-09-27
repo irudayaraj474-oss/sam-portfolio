@@ -7,88 +7,137 @@ import {
 export default function Skills() {
   const softwares = [
     {
+      id: "premiere",
       name: "Adobe Premiere Pro",
-      tag: "Primary NLE",
-      level: "98%",
-      color: "from-purple-600 to-indigo-600",
-      accent: "text-purple-600",
-      dot: "bg-purple-600",
+      category: "VIDEO EDITING",
+      level: "Expert",
+      levelBadgeClass: "bg-cyan-950/80 border-cyan-400/40 text-cyan-300 shadow-[0_0_14px_rgba(56,189,248,0.25)]",
+      barGradient: "from-cyan-400 via-sky-400 to-blue-600",
+      barWidth: "98%",
+      dotColor: "bg-cyan-400 shadow-[0_0_8px_#38bdf8]",
+      hoverBorder: "hover:border-cyan-400/35 hover:shadow-[0_0_32px_rgba(56,189,248,0.24)]",
+      isHero: true,
       features: [
-        "Advanced Multi-Cam Sync",
-        "Dynamic Link with AE",
-        "Speed Ramps & Time Remapping",
-        "ProRes 4K Proxy Workflows"
-      ]
+        "Multi-Cam Editing",
+        "Speed Ramping & Time Remapping",
+        "Dynamic Link Workflow",
+        "Proxy Editing (4K)"
+      ],
+      bottomLabel: "INDUSTRY READY",
+      proofText: "Watch Demo",
+      proofIcon: "▶",
+      proofLink: "#projects"
     },
     {
+      id: "after-effects",
       name: "Adobe After Effects",
-      tag: "Motion Graphics & VFX",
-      level: "94%",
-      color: "from-blue-600 to-indigo-700",
-      accent: "text-blue-600",
-      dot: "bg-blue-600",
+      category: "MOTION GRAPHICS",
+      level: "Advanced",
+      levelBadgeClass: "bg-blue-950/80 border-blue-400/40 text-blue-300 shadow-[0_0_14px_rgba(96,165,250,0.2)]",
+      barGradient: "from-blue-500 via-indigo-500 to-cyan-400",
+      barWidth: "94%",
+      dotColor: "bg-blue-400 shadow-[0_0_8px_#60a5fa]",
+      hoverBorder: "hover:border-blue-400/35 hover:shadow-[0_0_32px_rgba(96,165,250,0.22)]",
+      isHero: false,
       features: [
-        "Kinetic Typography & Titles",
-        "3D Camera Tracking & Nulls",
-        "Rotoscoping & Green Screen",
-        "Custom Logo & HUD Animations"
-      ]
+        "Kinetic Typography",
+        "Motion Graphics",
+        "Camera Tracking",
+        "Logo Animations"
+      ],
+      bottomLabel: "INDUSTRY READY",
+      proofText: "View Motion",
+      proofIcon: "▶",
+      proofLink: "#projects"
     },
     {
+      id: "davinci",
       name: "DaVinci Resolve Studio",
-      tag: "Color Science & Fairlight",
-      level: "95%",
-      color: "from-amber-500 to-rose-600",
-      accent: "text-amber-600",
-      dot: "bg-amber-600",
+      category: "COLOR GRADING",
+      level: "Advanced",
+      levelBadgeClass: "bg-amber-950/80 border-orange-400/40 text-amber-300 shadow-[0_0_14px_rgba(251,146,60,0.2)]",
+      barGradient: "from-amber-400 via-orange-500 to-rose-600",
+      barWidth: "95%",
+      dotColor: "bg-orange-400 shadow-[0_0_8px_#fb923c]",
+      hoverBorder: "hover:border-orange-400/35 hover:shadow-[0_0_32px_rgba(251,146,60,0.22)]",
+      isHero: false,
       features: [
-        "Node-Based Color Pipeline",
-        "CST (Color Space Transforms)",
-        "Film Print Emulation (Kodak 2383)",
-        "Skin Tone Vector Balancing"
-      ]
+        "Node-Based Color Grading",
+        "Color Space Transform",
+        "Film Print Look",
+        "Skin Tone Balancing"
+      ],
+      bottomLabel: "INDUSTRY READY",
+      proofText: "Before / After",
+      proofIcon: "◐",
+      proofLink: "#projects"
     },
     {
+      id: "capcut",
       name: "CapCut Pro & Short-Form",
-      tag: "Viral Reels & Shorts",
-      level: "96%",
-      color: "from-cyan-500 to-blue-600",
-      accent: "text-cyan-600",
-      dot: "bg-cyan-600",
+      category: "SHORT-FORM EDITING",
+      level: "Professional",
+      levelBadgeClass: "bg-sky-950/80 border-sky-400/40 text-sky-300 shadow-[0_0_14px_rgba(56,189,248,0.2)]",
+      barGradient: "from-cyan-400 via-sky-500 to-blue-600",
+      barWidth: "96%",
+      dotColor: "bg-sky-400 shadow-[0_0_8px_#38bdf8]",
+      hoverBorder: "hover:border-sky-400/35 hover:shadow-[0_0_32px_rgba(56,189,248,0.22)]",
+      isHero: false,
       features: [
-        "Viral Hook Pacing & Cuts",
-        "Animated Kinetic Subtitles",
-        "Audio Beat-Matching",
-        "TikTok/Instagram Algorithm Formats"
-      ]
+        "Viral Hook Editing",
+        "Animated Captions",
+        "Beat-Synced Editing",
+        "Reels Optimization"
+      ],
+      bottomLabel: "INDUSTRY READY",
+      proofText: "Watch Reel",
+      proofIcon: "▶",
+      proofLink: "#projects"
     },
     {
+      id: "audio",
       name: "Adobe Audition & Fairlight",
-      tag: "Sound Design & Master",
-      level: "91%",
-      color: "from-emerald-500 to-teal-600",
-      accent: "text-emerald-600",
-      dot: "bg-emerald-600",
+      category: "AUDIO EDITING",
+      level: "Professional",
+      levelBadgeClass: "bg-emerald-950/80 border-emerald-400/40 text-emerald-300 shadow-[0_0_14px_rgba(52,211,153,0.2)]",
+      barGradient: "from-emerald-400 via-teal-400 to-cyan-500",
+      barWidth: "92%",
+      dotColor: "bg-emerald-400 shadow-[0_0_8px_#34d399]",
+      hoverBorder: "hover:border-emerald-400/35 hover:shadow-[0_0_32px_rgba(52,211,153,0.22)]",
+      isHero: false,
       features: [
-        "Dialogue De-noise & Vocal EQ",
-        "-14 LUFS Broadcast Standard",
-        "Sub-Bass & Spatial Risers",
-        "Foley Layering & Stereo Image"
-      ]
+        "Noise Reduction",
+        "Vocal Enhancement",
+        "Dialogue Mixing",
+        "Stereo Balancing"
+      ],
+      bottomLabel: "INDUSTRY READY",
+      proofText: "Listen Mix",
+      proofIcon: "♫",
+      proofLink: "#timeline"
     },
     {
+      id: "photoshop",
       name: "Photoshop & Illustrator",
-      tag: "Packaging & High-CTR Assets",
-      level: "92%",
-      color: "from-sky-500 to-blue-700",
-      accent: "text-sky-600",
-      dot: "bg-sky-600",
+      category: "CREATIVE DESIGN",
+      level: "Advanced",
+      levelBadgeClass: "bg-amber-950/70 border-amber-400/50 text-amber-300 shadow-[0_0_14px_rgba(251,191,36,0.25)]",
+      barGradient: "from-sky-400 via-blue-500 to-amber-400",
+      barWidth: "93%",
+      dotColor: "bg-amber-400 shadow-[0_0_8px_#fbbf24]",
+      hoverBorder: "hover:border-amber-400/40 hover:shadow-[0_0_32px_rgba(251,191,36,0.25)]",
+      isHero: false,
+      isLuxury: true,
       features: [
-        "High-CTR YouTube Thumbnails",
-        "Matte Textures & Film Grains",
-        "Vector Overlays & Icons",
-        "Commercial Poster Key Visuals"
-      ]
+        "Premium Brand Posters",
+        "Luxury Jewellery Campaigns",
+        "Social Media Creatives",
+        "Thumbnail Design"
+      ],
+      bottomLabel: "INDUSTRY READY",
+      proofText: "View Posters",
+      proofIcon: "⊞",
+      proofLink: "#gallery"
     }
   ];
 
@@ -106,109 +155,158 @@ export default function Skills() {
   return (
     <section
       id="skills"
-      className="relative py-28 px-4 sm:px-6 lg:px-8 bg-white overflow-hidden"
+      style={{ backgroundColor: "#050816" }}
+      className="relative py-28 px-4 sm:px-6 lg:px-8 overflow-hidden text-slate-100 font-sans"
     >
+      {/* Ambient Glows: Cyan Tech & Soft Luxury Gold for SRM Gold aesthetic */}
+      <div className="absolute top-1/4 -left-32 w-96 h-96 bg-sky-500/10 rounded-full blur-[160px] pointer-events-none"></div>
+      <div className="absolute top-1/3 -right-32 w-96 h-96 bg-amber-500/10 rounded-full blur-[180px] pointer-events-none"></div>
+      <div className="absolute bottom-10 left-1/3 w-80 h-80 bg-blue-600/10 rounded-full blur-[150px] pointer-events-none"></div>
+
       <div className="max-w-6xl mx-auto relative z-10">
-        {/* Title */}
+        {/* Section Header */}
         <div className="text-center mb-16">
           <motion.div
             initial={{ opacity: 0, y: -10 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-purple-100/70 border border-purple-200 text-purple-800 text-xs font-mono font-semibold mb-4"
+            className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-slate-900/80 border border-sky-400/25 text-sky-300 text-xs font-mono font-semibold mb-4 shadow-[0_0_16px_rgba(56,189,248,0.15)] backdrop-blur-md"
           >
-            <span>// POST-PRODUCTION ARSENAL</span>
+            <span className="w-1.5 h-1.5 rounded-full bg-cyan-400 animate-pulse"></span>
+            <span>// TECHNICAL STACK & ARSENAL</span>
           </motion.div>
+
           <motion.h2
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="text-3xl sm:text-4xl md:text-5xl font-extrabold font-display text-slate-950 tracking-tight"
+            className="text-3xl sm:text-4xl md:text-5xl font-extrabold font-display text-white tracking-tight leading-tight"
           >
             Mastered Software & <br />
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-600 via-indigo-600 to-cyan-600">
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-sky-300 to-amber-300">
               Technical Capabilities
             </span>
           </motion.h2>
-          <p className="text-slate-600 text-sm sm:text-base mt-4 max-w-2xl mx-auto font-normal">
-            From industry-standard non-linear suites to surgical color science and high-retention audio design.
+
+          <p className="text-slate-400 text-sm sm:text-base mt-4 max-w-2xl mx-auto font-normal leading-relaxed">
+            From industry-standard non-linear suites to surgical color science, luxury brand art direction, and high-retention audio engineering.
           </p>
         </div>
 
-        {/* Software Cards Grid */}
+        {/* 3×2 Custom Glassmorphism Cards Grid */}
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
           {softwares.map((sw, idx) => (
             <motion.div
-              key={idx}
-              initial={{ opacity: 0, y: 30 }}
+              key={sw.id}
+              initial={{ opacity: 0, y: 25 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              transition={{ duration: 0.5, delay: idx * 0.08 }}
-              className="p-6 rounded-3xl bg-white border border-slate-200/90 hover:border-slate-300 transition-all duration-300 group hover:-translate-y-1.5 shadow-sm hover:shadow-xl flex flex-col justify-between"
+              transition={{ duration: 0.45, delay: idx * 0.08 }}
+              style={{
+                backgroundColor: "rgba(15, 23, 42, 0.45)",
+                boxShadow: "0 0 24px rgba(56, 189, 248, 0.12)"
+              }}
+              className={`group relative p-6 sm:p-7 rounded-[24px] border border-[rgba(56,189,248,0.12)] backdrop-blur-xl transition-all duration-300 ease-[cubic-bezier(0.22,1,0.36,1)] hover:-translate-y-1 cursor-pointer flex flex-col justify-between ${sw.hoverBorder}`}
             >
+              {/* Subtle Luxury Gold/Cyan Corner Accent Glow for Hero or Luxury Cards */}
+              {sw.isHero && (
+                <div className="absolute top-0 right-0 w-28 h-28 bg-gradient-to-bl from-cyan-400/10 via-transparent to-transparent rounded-tr-[24px] pointer-events-none"></div>
+              )}
+              {sw.isLuxury && (
+                <div className="absolute top-0 right-0 w-28 h-28 bg-gradient-to-bl from-amber-400/15 via-transparent to-transparent rounded-tr-[24px] pointer-events-none"></div>
+              )}
+
               <div>
-                {/* Header */}
-                <div className="flex items-start justify-between mb-4">
-                  <div>
-                    <span className="text-[11px] font-mono tracking-wider uppercase text-slate-500 font-semibold">
-                      {sw.tag}
+                {/* Header: Category & Skill Level Pill */}
+                <div className="flex items-start justify-between gap-3 mb-3">
+                  <div className="flex flex-col gap-0.5">
+                    <span className="text-[12px] font-mono tracking-wider uppercase text-slate-400 font-semibold">
+                      {sw.category}
                     </span>
-                    <h3 className="text-lg font-bold text-slate-950 group-hover:text-purple-600 transition">
+                    <h3 className="text-xl sm:text-[28px] font-bold font-display text-white group-hover:text-cyan-300 transition-colors leading-snug">
                       {sw.name}
                     </h3>
                   </div>
-                  <span className={`text-xs font-mono font-bold px-2.5 py-1 rounded-full bg-slate-50 border border-slate-200 ${sw.accent}`}>
+
+                  {/* Level Pill */}
+                  <span className={`px-2.5 py-1 rounded-full text-[11px] font-mono font-semibold tracking-wide border backdrop-blur-md shrink-0 transition-transform group-hover:scale-105 ${sw.levelBadgeClass}`}>
                     {sw.level}
                   </span>
                 </div>
 
-                {/* Progress bar */}
-                <div className="w-full bg-slate-100 h-1.5 rounded-full overflow-hidden mb-5">
+                {/* Shimmering Progress Bar */}
+                <div className="relative w-full bg-slate-800/80 h-1.5 rounded-full overflow-hidden mb-6">
                   <div
-                    className={`h-full bg-gradient-to-r ${sw.color} rounded-full`}
-                    style={{ width: sw.level }}
-                  ></div>
+                    className={`h-full bg-gradient-to-r ${sw.barGradient} rounded-full relative overflow-hidden`}
+                    style={{ width: sw.barWidth }}
+                  >
+                    {/* Hover Shimmer Effect */}
+                    <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/50 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-1000 ease-in-out"></div>
+                    <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/30 to-transparent animate-shimmer opacity-0 group-hover:opacity-100 transition-opacity"></div>
+                  </div>
                 </div>
 
-                {/* Bullet Features */}
-                <ul className="space-y-2 text-xs text-slate-700 font-medium">
+                {/* Bullets List (15px font hierarchy) */}
+                <ul className="space-y-2.5 text-[14px] sm:text-[15px] text-slate-300 font-normal">
                   {sw.features.map((feat, fIdx) => (
-                    <li key={fIdx} className="flex items-center gap-2">
-                      <span className={`w-1.5 h-1.5 rounded-full ${sw.dot}`}></span>
-                      <span>{feat}</span>
+                    <li key={fIdx} className="flex items-center gap-2.5">
+                      <span className={`w-1.5 h-1.5 rounded-full shrink-0 ${sw.dotColor}`}></span>
+                      <span className="leading-snug">{feat}</span>
                     </li>
                   ))}
                 </ul>
               </div>
 
-              {/* Bottom Tag */}
-              <div className="mt-5 pt-3 border-t border-slate-100 flex items-center justify-between text-[11px] text-slate-500 font-mono">
-                <span>INDUSTRY BENCHMARK</span>
-                <span className="text-emerald-600 font-bold">READY</span>
+              {/* Card Footer: Industry Ready Label & Clickable Proof Button */}
+              <div className="mt-7 pt-4 border-t border-slate-800/80 flex items-center justify-between text-[11px] font-mono">
+                {/* Bottom Label */}
+                <div className="flex items-center gap-2 text-slate-400">
+                  <span className="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse"></span>
+                  <span className="font-semibold tracking-wide text-slate-300">{sw.bottomLabel}</span>
+                </div>
+
+                {/* Interactive Proof Button */}
+                <a
+                  href={sw.proofLink}
+                  className="group/btn inline-flex items-center gap-1.5 text-[12px] font-mono font-semibold text-cyan-400 hover:text-cyan-200 transition-colors py-1 relative"
+                >
+                  <span className="relative">
+                    {sw.proofText}
+                    <span className="absolute left-0 -bottom-0.5 w-0 h-[1.5px] bg-gradient-to-r from-cyan-400 to-sky-300 group-hover/btn:w-full transition-all duration-300"></span>
+                  </span>
+                  <span className="text-[10px] transform group-hover/btn:translate-x-1 transition-transform duration-300 text-cyan-400 group-hover/btn:text-cyan-200">
+                    {sw.proofIcon}
+                  </span>
+                </a>
               </div>
             </motion.div>
           ))}
         </div>
 
-        {/* Editing Disciplines & Competencies Pills */}
+        {/* EDITING WORKFLOW Disciplines & Competencies Pills */}
         <motion.div
-          initial={{ opacity: 0, y: 30 }}
+          initial={{ opacity: 0, y: 25 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="mt-14 p-6 sm:p-8 rounded-3xl bg-slate-50 border border-slate-200/90 shadow-sm"
+          style={{
+            backgroundColor: "rgba(15, 23, 42, 0.45)",
+            boxShadow: "0 0 24px rgba(56, 189, 248, 0.12)"
+          }}
+          className="mt-14 p-6 sm:p-8 rounded-[24px] border border-[rgba(56,189,248,0.12)] backdrop-blur-xl"
         >
-          <div className="flex items-center gap-2 mb-4 text-xs font-mono text-purple-700 font-bold">
-            <FaSlidersH />
+          <div className="flex items-center gap-2 mb-5 text-xs font-mono text-cyan-400 font-bold tracking-wider uppercase">
+            <FaSlidersH className="text-cyan-400" />
             <span>EDITING WORKFLOW</span>
+            <span className="w-1.5 h-1.5 rounded-full bg-amber-400/90 animate-pulse ml-1" title="Luxury Grade Pipeline"></span>
           </div>
 
           <div className="flex flex-wrap gap-2.5">
             {competencies.map((comp, idx) => (
               <span
                 key={idx}
-                className="px-3.5 py-1.5 rounded-full bg-white border border-slate-200 text-xs text-slate-800 font-medium shadow-xs hover:border-purple-300 transition-colors flex items-center gap-2"
+                className="px-4 py-2 rounded-full bg-slate-950/70 border border-slate-700/60 hover:border-cyan-400/50 text-xs sm:text-[13px] text-slate-200 font-medium shadow-sm hover:shadow-[0_0_16px_rgba(56,189,248,0.18)] transition-all duration-300 flex items-center gap-2 hover:-translate-y-0.5 cursor-default"
               >
-                <FaCheckCircle className="text-purple-600 text-[10px]" />
+                <FaCheckCircle className="text-cyan-400 text-[10px]" />
                 {comp}
               </span>
             ))}
