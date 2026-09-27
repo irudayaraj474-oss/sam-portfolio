@@ -1,6 +1,6 @@
 import { useState, useRef } from "react";
 import { motion } from "framer-motion";
-import { FaPlay, FaPause, FaArrowRight } from "react-icons/fa";
+import { FaPlay, FaPause, FaArrowRight, FaThLarge, FaFilm } from "react-icons/fa";
 
 // All 10 Unique Master Productions (Duplicate Removed)
 export const videoProjectsData = [
@@ -216,7 +216,7 @@ export const videoProjectsData = [
   }
 ];
 
-function ReelCard({ project, onSelectProject }) {
+function ReelCard({ project, onSelectProject, isGrid = false }) {
   const videoRef = useRef(null);
   const [isPlaying, setIsPlaying] = useState(false);
 
@@ -243,7 +243,9 @@ function ReelCard({ project, onSelectProject }) {
       onClick={() => onSelectProject(project)}
       onMouseEnter={handleMouseEnter}
       onMouseLeave={handleMouseLeave}
-      className="group relative flex-shrink-0 w-64 sm:w-72 md:w-80 aspect-[9/16] rounded-3xl overflow-hidden bg-slate-900 border border-slate-200/90 shadow-md hover:shadow-2xl hover:scale-[1.03] transition-all duration-300 cursor-pointer select-none"
+      className={`group relative ${
+        isGrid ? "w-full" : "flex-shrink-0 w-64 sm:w-72 md:w-80"
+      } aspect-[9/16] rounded-3xl overflow-hidden bg-slate-900 border border-slate-200/90 shadow-md hover:shadow-2xl hover:scale-[1.03] transition-all duration-300 cursor-pointer select-none`}
     >
       {/* High-Quality Thumbnail Poster Image */}
       {project.thumbnail && (
@@ -313,6 +315,8 @@ function ReelCard({ project, onSelectProject }) {
 export default function Projects({ onSelectProject }) {
   const [activeTab, setActiveTab] = useState("All 10 Videos");
   const [isPaused, setIsPaused] = useState(false);
+  const [viewMode, setViewMode] = useState("marquee");
+  const sectionRef = useRef(null);
 
   const categories = [
     { label: "All 10 Videos", filterKey: "all", count: videoProjectsData.length },
@@ -334,15 +338,23 @@ export default function Projects({ onSelectProject }) {
   // Duplicate baseList once to create two exact halves for seamless 0% -> -50% infinite loop
   const marqueeList = [...baseList, ...baseList];
 
+  const toggleViewMode = () => {
+    const nextMode = viewMode === "grid" ? "marquee" : "grid";
+    setViewMode(nextMode);
+    if (nextMode === "grid") {
+      sectionRef.current?.scrollIntoView({ behavior: "smooth" });
+    }
+  };
+
   return (
-    <section id="projects" className="relative py-24 px-4 sm:px-6 lg:px-8 bg-white overflow-hidden">
+    <section ref={sectionRef} id="projects" className="relative py-24 px-4 sm:px-6 lg:px-8 bg-white overflow-hidden">
       <div className="max-w-7xl mx-auto relative z-10">
         
         {/* Section Header */}
         <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-10 pb-6 border-b border-gray-100">
           <div>
             <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-purple-50 border border-purple-200 text-purple-700 text-xs font-mono font-semibold mb-3">
-              <span>// POST-PRODUCTION VAULT • CONTINUOUS INFINITE LOOP</span>
+              <span>// POST-PRODUCTION VAULT • {viewMode === "grid" ? "ALL 10 PRODUCTIONS GALLERY" : "CONTINUOUS INFINITE LOOP"}</span>
             </div>
             <motion.h2
               initial={{ opacity: 0, y: 15 }}
@@ -353,21 +365,53 @@ export default function Projects({ onSelectProject }) {
               Reels & Motion Vault
             </motion.h2>
             <p className="text-slate-600 text-sm mt-2 max-w-xl font-montserrat">
-              All 10 master productions aligned in a single continuous row, looping right to left. Hover over any video to pause and preview.
+              {viewMode === "grid"
+                ? "Browse all 10 master productions in full gallery view. Hover over any video for live preview, or click to open full 4K player."
+                : "All 10 master productions aligned in a single continuous row, looping right to left. Hover over any video to pause and preview."}
             </p>
           </div>
 
-          {/* Marquee info indicator with interactive Pause/Play toggle */}
           <div className="flex flex-col sm:flex-row sm:items-center gap-3">
-            <button
-              onClick={() => setIsPaused(!isPaused)}
-              className="inline-flex items-center gap-2 text-xs font-mono text-slate-700 bg-slate-50 hover:bg-slate-100 px-4 py-2 rounded-full border border-slate-200 transition cursor-pointer select-none shadow-xs"
-              title="Click to pause or resume continuous loop"
-            >
-              <span className={`w-2.5 h-2.5 rounded-full ${isPaused ? "bg-amber-500" : "bg-red-500 animate-pulse"}`}></span>
-              <span>{isPaused ? "Loop Paused • Click to Resume" : "Looping Right to Left (10 Videos)"}</span>
-              {isPaused ? <FaPlay className="text-[9px] text-slate-600 ml-1" /> : <FaPause className="text-[9px] text-slate-400 ml-1" />}
-            </button>
+            {/* View Mode Switcher */}
+            <div className="inline-flex items-center bg-slate-100 p-1 rounded-full border border-slate-200/80 shadow-xs">
+              <button
+                onClick={() => setViewMode("marquee")}
+                className={`px-3.5 py-1.5 rounded-full text-xs font-semibold transition-all duration-200 cursor-pointer flex items-center gap-1.5 ${
+                  viewMode === "marquee"
+                    ? "bg-black text-white shadow-sm"
+                    : "text-slate-600 hover:text-slate-900"
+                }`}
+                title="Continuous carousel loop"
+              >
+                <FaFilm className="text-[10px]" />
+                <span>Carousel</span>
+              </button>
+              <button
+                onClick={() => setViewMode("grid")}
+                className={`px-3.5 py-1.5 rounded-full text-xs font-semibold transition-all duration-200 cursor-pointer flex items-center gap-1.5 ${
+                  viewMode === "grid"
+                    ? "bg-black text-white shadow-sm"
+                    : "text-slate-600 hover:text-slate-900"
+                }`}
+                title="All videos grid"
+              >
+                <FaThLarge className="text-[10px]" />
+                <span>All Videos ({videoProjectsData.length})</span>
+              </button>
+            </div>
+
+            {/* Marquee info indicator with interactive Pause/Play toggle */}
+            {viewMode === "marquee" && (
+              <button
+                onClick={() => setIsPaused(!isPaused)}
+                className="inline-flex items-center gap-2 text-xs font-mono text-slate-700 bg-slate-50 hover:bg-slate-100 px-4 py-2 rounded-full border border-slate-200 transition cursor-pointer select-none shadow-xs"
+                title="Click to pause or resume continuous loop"
+              >
+                <span className={`w-2.5 h-2.5 rounded-full ${isPaused ? "bg-amber-500" : "bg-red-500 animate-pulse"}`}></span>
+                <span>{isPaused ? "Paused" : "Looping"}</span>
+                {isPaused ? <FaPlay className="text-[9px] text-slate-600 ml-1" /> : <FaPause className="text-[9px] text-slate-400 ml-1" />}
+              </button>
+            )}
 
             {/* Category Filter Pills */}
             <div className="flex flex-wrap gap-1.5">
@@ -393,31 +437,52 @@ export default function Projects({ onSelectProject }) {
           </div>
         </div>
 
-        {/* ALL 10 VIDEOS IN ONE SINGLE CONTINUOUS ROW (MOVING RIGHT TO LEFT IN AN INFINITE LOOP) */}
-        <div className="relative w-full overflow-hidden py-4 -mx-4 sm:mx-0">
-          {/* Left Edge Fade Overlay */}
-          <div className="pointer-events-none absolute left-0 top-0 bottom-0 w-16 sm:w-28 bg-gradient-to-r from-white via-white/80 to-transparent z-20"></div>
-          {/* Right Edge Fade Overlay */}
-          <div className="pointer-events-none absolute right-0 top-0 bottom-0 w-16 sm:w-28 bg-gradient-to-l from-white via-white/80 to-transparent z-20"></div>
+        {/* VIDEOS DISPLAY: MARQUEE ROW OR RESPONSIVE ALL-VIDEOS GRID */}
+        {viewMode === "marquee" ? (
+          <div className="relative w-full overflow-hidden py-4 -mx-4 sm:mx-0">
+            {/* Left Edge Fade Overlay */}
+            <div className="pointer-events-none absolute left-0 top-0 bottom-0 w-16 sm:w-28 bg-gradient-to-r from-white via-white/80 to-transparent z-20"></div>
+            {/* Right Edge Fade Overlay */}
+            <div className="pointer-events-none absolute right-0 top-0 bottom-0 w-16 sm:w-28 bg-gradient-to-l from-white via-white/80 to-transparent z-20"></div>
 
-          {/* Continuous Right-to-Left Infinite Row */}
-          <div
-            key={activeTab}
-            className="animate-reel-marquee flex items-center gap-6"
-            style={{
-              animationPlayState: isPaused ? "paused" : undefined,
-              animationDuration: `${Math.max(40, baseList.length * 4.2)}s`
-            }}
-          >
-            {marqueeList.map((project, idx) => (
-              <ReelCard
-                key={`${project.id}-${idx}`}
-                project={project}
-                onSelectProject={onSelectProject}
-              />
-            ))}
+            {/* Continuous Right-to-Left Infinite Row */}
+            <div
+              key={activeTab}
+              className="animate-reel-marquee flex items-center gap-6"
+              style={{
+                animationPlayState: isPaused ? "paused" : undefined,
+                animationDuration: `${Math.max(40, baseList.length * 4.2)}s`
+              }}
+            >
+              {marqueeList.map((project, idx) => (
+                <ReelCard
+                  key={`${project.id}-${idx}`}
+                  project={project}
+                  onSelectProject={onSelectProject}
+                  isGrid={false}
+                />
+              ))}
+            </div>
           </div>
-        </div>
+        ) : (
+          <motion.div
+            initial={{ opacity: 0, y: 15 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.3 }}
+            className="py-4"
+          >
+            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-5 sm:gap-6">
+              {filteredProjects.map((project) => (
+                <ReelCard
+                  key={project.id}
+                  project={project}
+                  onSelectProject={onSelectProject}
+                  isGrid={true}
+                />
+              ))}
+            </div>
+          </motion.div>
+        )}
 
         {/* Bottom Status Banner */}
         <div className="mt-10 flex flex-col sm:flex-row items-center justify-between gap-4 p-5 rounded-2xl bg-slate-50 border border-slate-200/80">
@@ -427,17 +492,26 @@ export default function Projects({ onSelectProject }) {
               <span className="relative inline-flex rounded-full h-3 w-3 bg-emerald-500"></span>
             </span>
             <p className="text-xs sm:text-sm font-medium text-slate-700">
-              <span className="font-bold text-slate-900">All 10 unique video projects</span> are running in one seamless row. Hover over any card to preview.
+              {viewMode === "grid" ? (
+                <>
+                  <span className="font-bold text-slate-900">All {filteredProjects.length} video projects</span> are displayed in full grid view. Hover over any video to preview or click to play in 4K.
+                </>
+              ) : (
+                <>
+                  <span className="font-bold text-slate-900">All 10 unique video projects</span> are running in one seamless row. Hover over any card to preview.
+                </>
+              )}
             </p>
           </div>
 
-          <a
-            href="#gallery"
+          <button
+            onClick={toggleViewMode}
             className="inline-flex items-center gap-2 px-6 py-2.5 rounded-full bg-black hover:bg-slate-800 text-white font-semibold text-xs transition shadow-sm hover:scale-105 cursor-pointer whitespace-nowrap"
           >
-            <span>View Commercial Key Art</span>
-            <span className="text-sm">→</span>
-          </a>
+            <FaThLarge className="text-xs" />
+            <span>{viewMode === "grid" ? "Switch to Carousel Row" : "View All Videos"}</span>
+            <span className="text-sm">{viewMode === "grid" ? "↺" : "→"}</span>
+          </button>
         </div>
 
       </div>

@@ -93,51 +93,6 @@ export default function Skills() {
       proofText: "Watch Reel",
       proofIcon: "▶",
       proofLink: "#projects"
-    },
-    {
-      id: "audio",
-      name: "Adobe Audition & Fairlight",
-      category: "AUDIO EDITING",
-      level: "Professional",
-      levelBadgeClass: "bg-emerald-950/80 border-emerald-400/40 text-emerald-300 shadow-[0_0_14px_rgba(52,211,153,0.2)]",
-      barGradient: "from-emerald-400 via-teal-400 to-cyan-500",
-      barWidth: "92%",
-      dotColor: "bg-emerald-400 shadow-[0_0_8px_#34d399]",
-      hoverBorder: "hover:border-emerald-400/35 hover:shadow-[0_0_32px_rgba(52,211,153,0.22)]",
-      isHero: false,
-      features: [
-        "Noise Reduction",
-        "Vocal Enhancement",
-        "Dialogue Mixing",
-        "Stereo Balancing"
-      ],
-      bottomLabel: "INDUSTRY READY",
-      proofText: "Listen Mix",
-      proofIcon: "♫",
-      proofLink: "#timeline"
-    },
-    {
-      id: "photoshop",
-      name: "Photoshop & Illustrator",
-      category: "CREATIVE DESIGN",
-      level: "Advanced",
-      levelBadgeClass: "bg-amber-950/70 border-amber-400/50 text-amber-300 shadow-[0_0_14px_rgba(251,191,36,0.25)]",
-      barGradient: "from-sky-400 via-blue-500 to-amber-400",
-      barWidth: "93%",
-      dotColor: "bg-amber-400 shadow-[0_0_8px_#fbbf24]",
-      hoverBorder: "hover:border-amber-400/40 hover:shadow-[0_0_32px_rgba(251,191,36,0.25)]",
-      isHero: false,
-      isLuxury: true,
-      features: [
-        "Premium Brand Posters",
-        "Luxury Jewellery Campaigns",
-        "Social Media Creatives",
-        "Thumbnail Design"
-      ],
-      bottomLabel: "INDUSTRY READY",
-      proofText: "View Posters",
-      proofIcon: "⊞",
-      proofLink: "#gallery"
     }
   ];
 
@@ -147,7 +102,6 @@ export default function Skills() {
     "Pattern Interrupts & Zoom Pulses",
     "Sound FX Layering & Ducking",
     "Aspect Ratio Adaptation (16:9 ⇄ 9:16)",
-    "Sony S-Log3 / Canon C-Log Grading",
     "Proxy 4K High-Speed Offline Editing",
     "YouTube Click-Through Thumbnail Design"
   ];
@@ -189,12 +143,12 @@ export default function Skills() {
           </motion.h2>
 
           <p className="text-slate-400 text-sm sm:text-base mt-4 max-w-2xl mx-auto font-normal leading-relaxed font-montserrat">
-            From industry-standard non-linear suites to surgical color science, luxury brand art direction, and high-retention audio engineering.
+            From industry-standard non-linear suites to surgical color science, dynamic motion graphics, and high-retention short-form storytelling.
           </p>
         </div>
 
-        {/* 3×2 Custom Glassmorphism Cards Grid */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+        {/* 2×2 Custom Glassmorphism Cards Grid */}
+        <div className="grid md:grid-cols-2 gap-6">
           {softwares.map((sw, idx) => (
             <motion.div
               key={sw.id}

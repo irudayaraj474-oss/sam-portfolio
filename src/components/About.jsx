@@ -1,10 +1,7 @@
 import { motion } from "framer-motion";
 import { 
   FaBolt, 
-  FaPalette, 
-  FaVolumeUp, 
-  FaMagic, 
-  FaCheck 
+  FaVolumeUp 
 } from "react-icons/fa";
 
 export default function About() {
@@ -15,19 +12,9 @@ export default function About() {
       desc: "First 3-second hook optimization, kinetic pattern interrupts, dynamic zooms, and strategic pacing designed to keep audience watch time above 70%.",
     },
     {
-      icon: <FaPalette className="text-cyan-600 text-xl" />,
-      title: "Cinematic Color Science",
-      desc: "Converting Sony S-Log3, Canon C-Log, and RED RAW into rich, filmic lookbooks with accurate skin tones, split-toning, and Kodak 2383 emulations.",
-    },
-    {
       icon: <FaVolumeUp className="text-emerald-600 text-xl" />,
       title: "Spatial Sound Design & Foley",
       desc: "Audio accounts for 50% of your video's impact. Layered whooshes, impacts, cinematic risers, sub-bass drops, and pristine vocal isolation.",
-    },
-    {
-      icon: <FaMagic className="text-purple-600 text-xl" />,
-      title: "2D/3D Motion Graphics & VFX",
-      desc: "Custom kinetic typography, 3D camera tracking, screen replacements, UI mockups, and dynamic callouts built inside After Effects.",
     },
   ];
 
@@ -90,26 +77,6 @@ export default function About() {
               I’m continuously improving my creative skills and always look for new ways to make every video feel more premium, impactful, and memorable.
             </p>
 
-            {/* Quick Specs Checklist */}
-            <div className="pt-2 grid sm:grid-cols-2 gap-3 text-sm text-slate-800 font-medium">
-              <div className="flex items-center gap-2">
-                <FaCheck className="text-emerald-500 text-xs" />
-                <span>24 - 48h Short-Form Turnaround</span>
-              </div>
-              <div className="flex items-center gap-2">
-                <FaCheck className="text-emerald-500 text-xs" />
-                <span>4K ProRes / Rec.709 Master</span>
-              </div>
-              <div className="flex items-center gap-2">
-                <FaCheck className="text-emerald-500 text-xs" />
-                <span>YouTube High-Retention Hooks</span>
-              </div>
-              <div className="flex items-center gap-2">
-                <FaCheck className="text-emerald-500 text-xs" />
-                <span>Commercial Color Grading</span>
-              </div>
-            </div>
-
             {/* CTAs */}
             <div className="pt-4 flex flex-wrap gap-4">
               <a
@@ -127,7 +94,7 @@ export default function About() {
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.7 }}
-            className="lg:col-span-6 grid sm:grid-cols-2 gap-4"
+            className="lg:col-span-6 grid sm:grid-cols-2 lg:grid-cols-1 gap-4"
           >
             {pillars.map((pillar, idx) => (
               <div

@@ -12,38 +12,38 @@ export default function Workflow() {
   const steps = [
     {
       step: "01",
-      title: "Brief, Hook & Storyboard",
+      title: "Strategy & Concept",
       icon: <FaClipboardList className="text-purple-600 text-lg" />,
-      desc: "Analyze your raw footage, identify viral hook opportunities, outline pacing rhythms, and establish the visual tone before touching the timeline.",
-      deliverable: "Creative Direction & Retention Strategy"
+      desc: "Understand the brand, define the visual direction, and create a high-impact concept before designing.",
+      deliverable: "Creative Direction & Brand Mood"
     },
     {
       step: "02",
-      title: "Ingest, Proxies & The Rough Cut",
+      title: "Story & Structure",
       icon: <FaCut className="text-cyan-600 text-lg" />,
-      desc: "Generate fast ProRes proxies, cull out dead air, sync multi-cam angles, and lock down tight A-roll storytelling using J-cuts and L-cuts.",
-      deliverable: "Locked Assembly Cut (Zero Fluff)"
+      desc: "Build engaging pacing with clean edits, smooth transitions, and attention-grabbing openings.",
+      deliverable: "Hook-Driven Editing"
     },
     {
       step: "03",
-      title: "Motion Graphics & Kinetic Polish",
+      title: "Premium Design Polish",
       icon: <FaMagic className="text-pink-600 text-lg" />,
-      desc: "Animate kinetic typography, 3D camera tracking, lower thirds, UI mockups, and dynamic B-roll cutaways every 3-5 seconds to reset viewer attention.",
-      deliverable: "High-Retention Visual Assets"
+      desc: "Add cinematic motion graphics, luxury typography, and elegant visual details that elevate the brand.",
+      deliverable: "Luxury Visual Identity"
     },
     {
       step: "04",
-      title: "Spatial Sound Design & Foley",
+      title: "Sound & Motion",
       icon: <FaVolumeUp className="text-amber-600 text-lg" />,
-      desc: "The secret to cinematic impact. Layering risers, impacts, atmospheric sub-bass, whooshes, and mastering dialogue to broadcast-standard -14 LUFS.",
-      deliverable: "Fully Spatialized 3D Audio Bed"
+      desc: "Enhance every edit with impactful sound effects, music, and smooth motion for a cinematic feel.",
+      deliverable: "Cinematic Audio Experience"
     },
     {
       step: "05",
-      title: "DaVinci Color Science & 4K Export",
+      title: "Final Delivery",
       icon: <FaFilm className="text-emerald-600 text-lg" />,
-      desc: "Transforming flat LOG into rich, filmic lookbooks with accurate skin tones, Kodak 2383 emulation, and rendering in pristine 4K 10-bit ProRes & Web H.265.",
-      deliverable: "4K Master Delivery + Social Cuts"
+      desc: "Deliver polished 4K content optimized for Instagram, YouTube, and commercial campaigns.",
+      deliverable: "Ready for Every Platform"
     }
   ];
 
@@ -61,7 +61,7 @@ export default function Workflow() {
             viewport={{ once: true }}
             className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-purple-100 border border-purple-200 text-purple-700 text-xs font-mono mb-4"
           >
-            <span>// POST-PRODUCTION PIPELINE</span>
+            <span>// CREATIVE WORKFLOW</span>
           </motion.div>
           <motion.h2
             initial={{ opacity: 0, y: 20 }}
@@ -69,13 +69,13 @@ export default function Workflow() {
             viewport={{ once: true }}
             className="text-3xl sm:text-4xl md:text-5xl font-extrabold font-playfair text-slate-950 tracking-tight"
           >
-            How We Turn Raw Rushes Into <br />
+            How I Turn Ideas Into <br />
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-600 via-indigo-600 to-cyan-600">
-              High-Converting Visual Films
+              Premium Visual Campaigns
             </span>
           </motion.h2>
           <p className="text-slate-600 text-sm sm:text-base mt-4 max-w-2xl mx-auto font-montserrat">
-            A seamless, stress-free 5-stage editing pipeline crafted for creators and brands who demand perfection and rapid delivery.
+            A fast, strategy-first workflow that transforms a simple brief into scroll-stopping visuals for brands, social media, and advertising.
           </p>
         </div>
 

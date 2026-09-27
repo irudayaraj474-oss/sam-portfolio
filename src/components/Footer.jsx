@@ -14,21 +14,12 @@ export default function Footer() {
 
   const navLinks = [
     { label: "About & Philosophy", href: "#about" },
-    { label: "NLE Timeline Engine", href: "#timeline" },
-    { label: "Post-Production Arsenal", href: "#skills" },
-    { label: "Featured Video Works", href: "#projects" },
-    { label: "Thumbnails & Key Art", href: "#gallery" },
-    { label: "5-Stage Pipeline", href: "#workflow" },
+    { label: "Technical Stack & Arsenal", href: "#skills" },
+    { label: "Reels & Motion Vault", href: "#projects" },
+    { label: "Commercial Key Art & Posters", href: "#gallery" },
+    { label: "Creative Workflow", href: "#workflow" },
     { label: "Resume & Experience", href: "#resume" },
-    { label: "Book a Project", href: "#contact" }
-  ];
-
-  const workflowSpecs = [
-    "Apple ProRes 422 HQ",
-    "4K & Vertical Reel Delivery",
-    "-14 LUFS Audio Mastering",
-    "DaVinci Color Workflow",
-    "24–48 Hour Delivery"
+    { label: "Contact & Inquiries", href: "#contact" }
   ];
 
   const socials = [
@@ -84,10 +75,10 @@ export default function Footer() {
       <div className="absolute bottom-0 right-12 w-96 h-96 bg-amber-500/10 rounded-full blur-[180px] pointer-events-none"></div>
 
       <div className="relative max-w-[1280px] mx-auto z-10">
-        {/* Main Three-Column Layout */}
+        {/* Main Two-Column Layout */}
         <div className="grid md:grid-cols-12 gap-10 lg:gap-14 pb-14 border-b border-[rgba(56,189,248,0.12)]">
-          {/* Column 1: Personal Branding (5 cols) */}
-          <div className="md:col-span-5 space-y-4">
+          {/* Column 1: Personal Branding (6 cols) */}
+          <div className="md:col-span-6 space-y-4">
             <h2 className="text-[26px] sm:text-[30px] font-bold text-[#F8FAFC] tracking-tight font-display leading-tight">
               SAMSON <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-sky-300 to-amber-300">DONALD I</span>
             </h2>
@@ -99,6 +90,14 @@ export default function Footer() {
               <p className="text-[15px] text-[#94A3B8] leading-relaxed max-w-md font-normal">
                 Transforming raw footage into premium commercials, viral short-form content, luxury jewellery campaigns, and cinematic brand stories.
               </p>
+            </div>
+
+            {/* Recruiter-ready signature banner */}
+            <div className="pt-1">
+              <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-cyan-950/40 border border-cyan-400/20 text-cyan-300/90 text-[11px] font-mono">
+                <span className="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse"></span>
+                <span>OPEN FOR SELECT COMMISSIONS</span>
+              </div>
             </div>
 
             {/* Social Glassmorphism Buttons (44×44px, Rounded 14px, Cyan Glow) */}
@@ -121,13 +120,13 @@ export default function Footer() {
             </div>
           </div>
 
-          {/* Column 2: EXPLORE Navigation (3 cols) */}
-          <div className="md:col-span-3 space-y-4">
+          {/* Column 2: EXPLORE Navigation (6 cols) */}
+          <div className="md:col-span-6 space-y-4">
             <h3 className="text-[12px] font-mono font-bold tracking-widest uppercase text-slate-400">
               EXPLORE
             </h3>
 
-            <ul className="space-y-2.5 text-[14px] sm:text-[15px]">
+            <ul className="grid sm:grid-cols-2 gap-x-8 gap-y-3 text-[14px] sm:text-[15px]">
               {navLinks.map((link, idx) => (
                 <li key={idx}>
                   <a
@@ -142,30 +141,6 @@ export default function Footer() {
                 </li>
               ))}
             </ul>
-          </div>
-
-          {/* Column 3: CREATIVE WORKFLOW (4 cols) */}
-          <div className="md:col-span-4 space-y-4">
-            <h3 className="text-[12px] font-mono font-bold tracking-widest uppercase text-slate-400">
-              CREATIVE WORKFLOW
-            </h3>
-
-            <ul className="space-y-3 text-[14px] sm:text-[15px] font-mono text-[#94A3B8]">
-              {workflowSpecs.map((spec, idx) => (
-                <li key={idx} className="flex items-center gap-3">
-                  <span className="w-1.5 h-1.5 rounded-full bg-cyan-400 shadow-[0_0_8px_#38bdf8] shrink-0"></span>
-                  <span className="hover:text-[#F8FAFC] transition-colors">{spec}</span>
-                </li>
-              ))}
-            </ul>
-
-            {/* Recruiter-ready signature banner */}
-            <div className="pt-3">
-              <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-cyan-950/40 border border-cyan-400/20 text-cyan-300/90 text-[11px] font-mono">
-                <span className="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse"></span>
-                <span>OPEN FOR SELECT COMMISSIONS</span>
-              </div>
-            </div>
           </div>
         </div>
 
