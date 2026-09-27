@@ -199,7 +199,7 @@ export default function Skills() {
         >
           <div className="flex items-center gap-2 mb-4 text-xs font-mono text-purple-700 font-bold">
             <FaSlidersH />
-            <span>CORE EDITING METHODOLOGIES & RETENTION TECHNIQUES</span>
+            <span>EDITING WORKFLOW</span>
           </div>
 
           <div className="flex flex-wrap gap-2.5">
