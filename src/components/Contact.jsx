@@ -3,8 +3,6 @@ import { motion } from "framer-motion";
 import { 
   FaEnvelope, 
   FaPhoneAlt, 
-  FaLinkedin, 
-  FaGithub, 
   FaWhatsapp, 
   FaCopy, 
   FaCheck
@@ -142,33 +140,6 @@ export default function Contact() {
               Call Now →
             </span>
           </a>
-
-          {/* Social Channels Row */}
-          <div className="grid grid-cols-2 gap-3 pt-1">
-            <a
-              href="https://linkedin.com/in/i-samson-donald-7b2743349"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="p-4 rounded-2xl bg-white border border-slate-200 hover:border-blue-500 transition flex items-center justify-center gap-3 group shadow-sm"
-            >
-              <FaLinkedin className="text-blue-600 text-xl group-hover:scale-110 transition" />
-              <span className="text-xs sm:text-sm font-semibold text-slate-800 group-hover:text-blue-600">
-                LinkedIn Profile
-              </span>
-            </a>
-
-            <a
-              href="https://github.com/irudayaraj474-oss"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="p-4 rounded-2xl bg-white border border-slate-200 hover:border-purple-500 transition flex items-center justify-center gap-3 group shadow-sm"
-            >
-              <FaGithub className="text-slate-800 text-xl group-hover:scale-110 transition" />
-              <span className="text-xs sm:text-sm font-semibold text-slate-800 group-hover:text-purple-600">
-                GitHub Portfolio
-              </span>
-            </a>
-          </div>
         </motion.div>
       </div>
     </section>

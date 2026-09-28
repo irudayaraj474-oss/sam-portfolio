@@ -2,14 +2,7 @@ import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { FaExpand, FaTimes, FaEye, FaTag } from "react-icons/fa";
 
-// Existing designs
-import p1 from "../assets/images/p1.png";
-import p2 from "../assets/images/p2.png";
-import p3 from "../assets/images/p3.png";
-import p4 from "../assets/images/p4.png";
-import p5 from "../assets/images/p5.png";
-
-// New SRM Gold & Diamonds and Digi Gold posters
+// SRM Gold & Diamonds and Digi Gold posters
 import srmSavingScheme from "../assets/images/srm_saving_scheme.jpg";
 import srmAppRed from "../assets/images/srm_app_red.jpg";
 import srmDigiGoldFirefly from "../assets/images/srm_digi_gold_firefly.jpg";
@@ -107,62 +100,7 @@ const graphicDesignWorks = [
     ctr: "+5.8% In-Store Inquiries",
     category: "Luxury Daily Social Creative",
     description: "Sophisticated social media rate announcement highlighting handcrafted gold rings with soft daylight hand modeling, botanical line accents, and rich aubergine accents."
-  },
-  { 
-    id: "ak-gold",
-    img: p3, 
-    title: "AK Gold — Festival & Retail Promotion", 
-    client: "AK Gold",
-    tag: "Jewelry Commercial",
-    sector: "Jewelry & Luxury Brands",
-    ctr: "+5.1% Walk-in Leads",
-    category: "Retail Brand Packaging",
-    description: "Luxury commercial advertisement for festival jewelry offers focusing on warm gold tones, rich shadows, and premium typographic hierarchy."
-  },
-  { 
-    id: "ideal-ias-1",
-    img: p1, 
-    title: "Ideal IAS Academy — Admission Campaign", 
-    client: "Ideal IAS Academy",
-    tag: "Statewide Campaign",
-    sector: "Retail & Education",
-    ctr: "+4.2% CTR Boost",
-    category: "Educational Poster & Key Visual",
-    description: "High-visibility admission poster and social creative engineered with bold typography, high-contrast palette, and authoritative layout to drive student conversions."
-  },
-  { 
-    id: "ideal-ias-2",
-    img: p2, 
-    title: "Ideal IAS Academy — Brand Outreach", 
-    client: "Ideal IAS Academy",
-    tag: "Brand Campaign",
-    sector: "Retail & Education",
-    ctr: "+3.8% Engagement",
-    category: "Statewide Campaign Creative",
-    description: "Multi-channel recruitment visual designed for print and digital advertising campaigns across Tamil Nadu with strategic information hierarchy."
-  },
-  { 
-    id: "sri-murugan",
-    img: p4, 
-    title: "Sri Murugan — Commercial Launch", 
-    client: "Sri Murugan Stores",
-    tag: "Retail Launch",
-    sector: "Retail & Education",
-    ctr: "High Recall Rate",
-    category: "Commercial Key Art",
-    description: "High-contrast retail launch artwork designed for print circulation, digital display hoardings, and promotional marketing collateral."
-  },
-  { 
-    id: "navi-mobiles",
-    img: p5, 
-    title: "Navi Mobiles — Festive Smartphone Mega-Sale", 
-    client: "Navi Mobiles",
-    tag: "Tech & Retail Ad",
-    sector: "Retail & Education",
-    ctr: "+6.4% Footfall Surge",
-    category: "Electronics Marketing Creative",
-    description: "Dynamic product packaging and offer poster designed to convert mobile buyers during peak festival season with punchy discount badges."
-  },
+  }
 ];
 
 export default function Gallery() {
@@ -172,8 +110,7 @@ export default function Gallery() {
   const sectors = [
     "All Graphic Works",
     "Jewelry & Luxury Brands",
-    "Fintech & Mobile Apps",
-    "Retail & Education"
+    "Fintech & Mobile Apps"
   ];
 
   const filteredItems = activeSector === "All Graphic Works"
@@ -208,26 +145,6 @@ export default function Gallery() {
           <p className="text-slate-600 text-sm sm:text-base mt-4 max-w-2xl mx-auto font-normal font-montserrat">
             From luxury jewelry branding and fintech app launches to high-converting social key art. Click any poster to inspect in full resolution.
           </p>
-
-          {/* Quick Metrics Ticker */}
-          <div className="mt-8 grid grid-cols-2 sm:grid-cols-4 gap-3 max-w-3xl mx-auto">
-            <div className="p-3.5 rounded-2xl bg-white border border-slate-200/90 shadow-sm text-center">
-              <span className="text-xl font-bold text-purple-600 font-display">13+</span>
-              <p className="text-[11px] text-slate-500 mt-0.5 font-medium">Commercial Campaigns</p>
-            </div>
-            <div className="p-3.5 rounded-2xl bg-white border border-slate-200/90 shadow-sm text-center">
-              <span className="text-xl font-bold text-cyan-600 font-display">+9.1%</span>
-              <p className="text-[11px] text-slate-500 mt-0.5 font-medium">Peak CTR Uplift</p>
-            </div>
-            <div className="p-3.5 rounded-2xl bg-white border border-slate-200/90 shadow-sm text-center">
-              <span className="text-xl font-bold text-amber-600 font-display">300 DPI</span>
-              <p className="text-[11px] text-slate-500 mt-0.5 font-medium">Print & 4K Digital</p>
-            </div>
-            <div className="p-3.5 rounded-2xl bg-white border border-slate-200/90 shadow-sm text-center">
-              <span className="text-xl font-bold text-emerald-600 font-display">100%</span>
-              <p className="text-[11px] text-slate-500 mt-0.5 font-medium">Brand Identity Focus</p>
-            </div>
-          </div>
         </div>
 
         {/* Sector Filter Tabs */}
@@ -267,7 +184,7 @@ export default function Gallery() {
               >
                 <div>
                   {/* Image Container with Framing */}
-                  <div className="relative overflow-hidden bg-slate-100 h-88 flex items-center justify-center p-3 pt-12">
+                  <div className="relative overflow-hidden bg-slate-100 h-88 flex items-center justify-center p-4">
                     <img
                       src={item.img}
                       alt={item.title}
@@ -277,16 +194,6 @@ export default function Gallery() {
 
                     {/* Gradient overlay */}
                     <div className="absolute inset-0 bg-gradient-to-t from-white via-transparent to-transparent opacity-40 group-hover:opacity-10 transition-opacity"></div>
-
-                    {/* Top Badges */}
-                    <div className="absolute top-3 left-3 right-3 flex items-center justify-between z-10">
-                      <span className="px-2.5 py-1 rounded-full bg-black/75 backdrop-blur-md text-white text-[10px] font-mono font-semibold truncate max-w-[170px]">
-                        {item.tag}
-                      </span>
-                      <span className="px-2.5 py-1 rounded-full bg-emerald-50 text-emerald-700 border border-emerald-200 text-[10px] font-mono font-bold">
-                        {item.ctr}
-                      </span>
-                    </div>
 
                     {/* Hover Inspect Icon */}
                     <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity bg-black/30 backdrop-blur-[2px]">
@@ -378,9 +285,6 @@ export default function Gallery() {
                 </p>
                 <div className="flex items-center gap-2 whitespace-nowrap">
                   <span className="px-3 py-1 rounded-full bg-purple-50 border border-purple-200 text-purple-700 text-xs font-mono font-semibold">
-                    {selectedItem.ctr}
-                  </span>
-                  <span className="px-3 py-1 rounded-full bg-emerald-50 border border-emerald-200 text-emerald-700 text-xs font-mono font-semibold">
                     {selectedItem.sector}
                   </span>
                 </div>

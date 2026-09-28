@@ -54,6 +54,15 @@ export default function ShowreelModal({ isOpen, onClose, project }) {
     return () => clearInterval(interval);
   }, [isOpen, isPlaying]);
 
+  useEffect(() => {
+    if (!isOpen) return;
+    const handleKeyDown = (e) => {
+      if (e.key === "Escape") onClose();
+    };
+    window.addEventListener("keydown", handleKeyDown);
+    return () => window.removeEventListener("keydown", handleKeyDown);
+  }, [isOpen, onClose]);
+
   if (!isOpen) return null;
 
   const currentProject = project || {
@@ -78,7 +87,7 @@ export default function ShowreelModal({ isOpen, onClose, project }) {
 
   return (
     <AnimatePresence>
-      <div className="fixed inset-0 z-50 flex items-center justify-center p-3 sm:p-6 md:p-8">
+      <div className="fixed inset-0 z-[70] flex items-center justify-center p-3 sm:p-6 md:p-8">
         {/* Backdrop */}
         <motion.div
           initial={{ opacity: 0 }}

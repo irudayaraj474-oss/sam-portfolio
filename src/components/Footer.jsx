@@ -1,7 +1,5 @@
 import { motion } from "framer-motion";
 import { 
-  FaGithub, 
-  FaLinkedin, 
   FaEnvelope, 
   FaWhatsapp, 
   FaArrowUp 
@@ -34,18 +32,6 @@ export default function Footer() {
       icon: <FaEnvelope className="text-base" />,
       href: "mailto:samson143.8508975373@gmail.com",
       hoverClass: "hover:border-cyan-400/50 hover:text-cyan-400 hover:shadow-[0_0_16px_rgba(56,189,248,0.35)]"
-    },
-    {
-      name: "LinkedIn",
-      icon: <FaLinkedin className="text-base" />,
-      href: "https://linkedin.com/in/i-samson-donald-7b2743349",
-      hoverClass: "hover:border-sky-400/50 hover:text-sky-400 hover:shadow-[0_0_16px_rgba(56,189,248,0.35)]"
-    },
-    {
-      name: "GitHub",
-      icon: <FaGithub className="text-base" />,
-      href: "https://github.com/irudayaraj474-oss",
-      hoverClass: "hover:border-purple-400/50 hover:text-purple-300 hover:shadow-[0_0_16px_rgba(168,85,247,0.35)]"
     }
   ];
 

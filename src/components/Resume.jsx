@@ -19,7 +19,7 @@ export default function Resume() {
           <span>OPEN TO OPPORTUNITIES • FULL-TIME & PROJECTS</span>
         </motion.div>
 
-        {/* Headline (Matching Screenshot: Let's Discuss Opportunities in red) */}
+        {/* Headline */}
         <motion.h2
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -27,7 +27,7 @@ export default function Resume() {
           transition={{ duration: 0.5, delay: 0.1 }}
           className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold font-playfair text-slate-900 tracking-tight"
         >
-          Let's Discuss <span className="text-[#c5221f]">Opportunities</span>
+          Let's Create Something <span className="text-[#c5221f]">Great Together</span>
         </motion.h2>
 
         {/* Subtitle Description */}
@@ -38,8 +38,7 @@ export default function Resume() {
           transition={{ duration: 0.5, delay: 0.2 }}
           className="mt-6 text-slate-600 text-base sm:text-lg md:text-xl max-w-2xl mx-auto leading-relaxed font-normal font-montserrat"
         >
-          I am actively seeking full-time Video Editor & Motion Graphics roles. <br className="hidden sm:inline" />
-          Whether you represent a creative agency, tech firm, or brand, let’s connect!
+          I'm open to full-time Video Editor opportunities and creative collaborations. If you're looking for clean, cinematic edits, luxury brand content, or engaging social media videos, I'd love to connect and create something meaningful together.
         </motion.p>
 
         {/* Red Pill Download Button (Matching Screenshot) */}

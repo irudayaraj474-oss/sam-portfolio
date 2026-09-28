@@ -55,7 +55,7 @@ function Home() {
       {/* Top Navbar */}
       <Navbar onOpenShowreel={handleOpenShowreel} />
 
-      {/* Hero Section with interactive timeline */}
+      {/* Hero Section */}
       <Hero onOpenShowreel={handleOpenShowreel} />
 
       {/* Post-Production Philosophy & About */}

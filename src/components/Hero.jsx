@@ -1,11 +1,10 @@
 import { motion } from "framer-motion";
 import { FaPlay } from "react-icons/fa";
-import TimelineMockup from "./TimelineMockup";
 import AntigravityDots from "./AntigravityDots";
 
 export default function Hero({ onOpenShowreel }) {
   return (
-    <section className="relative pt-36 pb-20 px-4 sm:px-6 lg:px-8 bg-white overflow-hidden flex flex-col justify-center items-center">
+    <section className="relative pt-36 pb-24 px-4 sm:px-6 lg:px-8 bg-white overflow-hidden flex flex-col justify-center items-center">
       {/* Google Antigravity Interactive Dot Particle Field */}
       <AntigravityDots />
 
@@ -21,9 +20,9 @@ export default function Hero({ onOpenShowreel }) {
           transition={{ duration: 0.8, delay: 0.1 }}
           className="text-4xl sm:text-6xl md:text-7xl lg:text-8xl font-black tracking-tight font-display text-slate-950 uppercase leading-[1.05]"
         >
-          Turning Raw Footage <br />
+          Turning Ideas Into <br />
           <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-600 via-indigo-600 to-cyan-600">
-            Into Cinematic Gold
+            Clean, Professional Videos
           </span>
         </motion.h1>
 
@@ -34,11 +33,9 @@ export default function Hero({ onOpenShowreel }) {
           transition={{ duration: 0.8, delay: 0.25 }}
           className="mt-6 text-slate-600 text-base sm:text-lg md:text-xl max-w-3xl mx-auto leading-relaxed font-normal"
         >
-          Lead Video Editor & Motion Designer specialized in{" "}
-          <strong className="text-slate-900 font-semibold">high-retention YouTube edits</strong>,{" "}
-          <strong className="text-slate-900 font-semibold">commercial brand films</strong>,{" "}
-          <strong className="text-slate-900 font-semibold">viral short-form content</strong>, and{" "}
-          <strong className="text-slate-900 font-semibold">DaVinci Resolve color science</strong>.
+          I'm a video editor building <strong className="text-slate-900 font-semibold">cinematic edits</strong>,{" "}
+          <strong className="text-slate-900 font-semibold">luxury brand content</strong>, and{" "}
+          <strong className="text-slate-900 font-semibold">engaging social media videos</strong> while continuously improving my creative skills.
         </motion.p>
 
         {/* CTA Buttons */}
@@ -58,26 +55,6 @@ export default function Hero({ onOpenShowreel }) {
             </span>
             <span>Watch 2026 Showreel</span>
           </button>
-        </motion.div>
-
-        {/* NLE Timeline Mockup Section */}
-        <motion.div
-          id="timeline"
-          initial={{ opacity: 0, y: 40 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.9, delay: 0.45 }}
-          className="mt-16 w-full"
-        >
-          <div className="mb-3 flex items-center justify-between px-2 text-xs text-slate-600 font-medium">
-            <span className="flex items-center gap-2">
-              <span className="w-2 h-2 rounded-full bg-purple-600"></span>
-              Live Multi-Track Timeline & Audio Architecture
-            </span>
-            <span className="font-mono text-slate-500 hidden sm:inline">
-              NLE Workspace Engine
-            </span>
-          </div>
-          <TimelineMockup onOpenShowreel={onOpenShowreel} />
         </motion.div>
       </div>
     </section>

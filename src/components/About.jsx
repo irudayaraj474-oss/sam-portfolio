@@ -62,19 +62,19 @@ export default function About() {
             className="lg:col-span-6 space-y-6"
           >
             <h3 className="text-2xl sm:text-3xl font-bold font-playfair text-slate-950">
-              Hey, I'm <span className="text-purple-600">Samson Donald I</span>.
+              Hey, I'm <span className="text-purple-600">Samson Donald</span>.
             </h3>
 
             <p className="text-slate-700 text-base sm:text-lg leading-relaxed font-normal font-montserrat">
-              I’m a <strong className="text-slate-950 font-semibold">Video Editor & Motion Graphics Artist</strong> who enjoys creating engaging videos that capture attention from the first few seconds. I work with <strong className="text-slate-950 font-semibold">Adobe Premiere Pro</strong>, motion graphics, sound design, and fast-paced editing to turn raw footage into professional content.
+              I'm a <strong className="text-slate-950 font-semibold">Video Editor</strong> passionate about creating clean, cinematic, and engaging videos. I work with <strong className="text-slate-950 font-semibold">Adobe Premiere Pro</strong>, <strong className="text-slate-950 font-semibold">After Effects</strong>, and <strong className="text-slate-950 font-semibold">DaVinci Resolve</strong> to turn raw footage into polished content with smooth pacing, refined visuals, and attention to detail. I also use <strong className="text-slate-950 font-semibold">Adobe Photoshop</strong> to create premium graphics that complement my video projects.
             </p>
 
             <p className="text-slate-600 text-sm sm:text-base leading-relaxed font-montserrat">
-              I enjoy editing <strong className="text-slate-900 font-semibold">luxury brand commercials, social media Reels, promotional videos, and cinematic short-form content</strong>. Whether it’s a 30-second advertisement, a high-energy vertical Reel, or a visually polished promotional video, I focus on smooth transitions, clean storytelling, and edits that keep viewers engaged.
+              I enjoy creating <strong className="text-slate-900 font-semibold">luxury brand commercials, social media Reels, promotional videos, and cinematic short-form content</strong>. My focus is on elegant storytelling, premium aesthetics, and edits that capture attention from the very first second.
             </p>
 
             <p className="text-slate-600 text-sm sm:text-base leading-relaxed font-montserrat">
-              I’m continuously improving my creative skills and always look for new ways to make every video feel more premium, impactful, and memorable.
+              As I continue growing as an editor, I'm constantly learning new techniques to make every project more professional, impactful, and memorable.
             </p>
 
             {/* CTAs */}
